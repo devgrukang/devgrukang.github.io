@@ -1636,6 +1636,25 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
     /* 마우스를 올려두면 잠시 멈춘다 (기존 동작 유지) */
     reel.addEventListener('mouseenter', function(){ hovering = true; });
     reel.addEventListener('mouseleave', function(){ hovering = false; });
+    /* 휠: 쇼릴이 화면에 걸쳐 있을 때만 가로로 넘긴다. 한 번의 휠 동작으로 쇼릴 높이만큼 넘기고 나면 페이지 스크롤로 넘긴다 */
+    var wheelAcc = 0, wheelStamp = 0;
+    reel.addEventListener('wheel', function(e){
+      if (e.ctrlKey || e.shiftKey) return;
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      var rect = reel.getBoundingClientRect();
+      var seen = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+      if (seen < rect.height * 0.5) return;
+      var now = Date.now();
+      if (now - wheelStamp > 300) wheelAcc = 0;
+      wheelStamp = now;
+      if (Math.abs(wheelAcc) >= rect.height * 1.2) return;
+      var d = e.deltaMode === 1 ? e.deltaY * 16 : (e.deltaMode === 2 ? e.deltaY * rect.height : e.deltaY);
+      wheelAcc += d;
+      reel.scrollLeft += d * 1.2;
+      wrap();
+      holdUntil = Date.now() + 700;
+      e.preventDefault();
+    }, {passive:false});
     var resizeTimer;
     window.addEventListener('resize', function(){
       clearTimeout(resizeTimer);
