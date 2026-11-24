@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>현장을 정리해 온 17년, 강은성</title>
+<meta name="description" content="강은성(Eunsung Kang) 이력서. 17년 5개월 · 8개 사업장 전부 정규직. 태양광 공무, 유리 품질 검사(Excel VBA), 자동차 생산라인, 병원 전산, 본사·자회사 웹사이트 2건 구축 총괄.">
+<meta name="author" content="Eunsung Kang">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://devgrukang.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="현장을 정리해 온 17년, 강은성">
+<meta property="og:description" content="기준이 없어 흔들리는 현장에 선을 그어 왔습니다. 17년 5개월, 8개 사업장 전부 정규직. 국문·영문 이력서.">
+<meta property="og:url" content="https://devgrukang.github.io/">
+<meta property="og:image" content="https://devgrukang.github.io/assets/photo.jpg">
+<meta name="theme-color" content="#faf9f6">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   설계 원칙
+   1. 하나의 활자 척도: Display > H2 > H3 > Lead > Body > Small > Micro
+   2. 하나의 간격 척도: 4의 배수 (--s1 ~ --s9). 섹션 사이는 --sec 하나로 통일
+   3. 한글은 단어 단위로만 끊는다 (word-break: keep-all) + 줄바꿈 균형(text-wrap)
+   4. 색은 세 가지 역할로만 쓴다: 먹색(본문) · 스텐실 레드(강조·결과) · 인디고/올리브(분류)
+   ============================================================ */
+:root{
+  /* 표면 */
+  --bg:#faf9f6;
+  --paper:#f2efe8;
+  --paper-2:#f7f5f0;
+  /* 먹색 */
+  --ink:#111110;
+  --ink-80:#2c2a27;
+  --ink-70:#4b4945;
+  --ink-50:#767370;
+  --ink-30:#a6a29c;
+  --rule:#e3dfd7;
+  --rule-soft:#eeeae3;
+  /* 강조: 스텐실 레드 (결과·행동·수치 단위) */
+  --red:#dd3b22;
+  --red-ink:#b52d15;
+  --red-wash:#f7e5df;
+  /* 분류 1: 인디고 (웹·디지털) */
+  --indigo:#20375a;
+  --indigo-wash:#e6eaf1;
+  /* 분류 2: 올리브 (현장·공무) */
+  --olive:#4d5a37;
+  --olive-wash:#e9ebde;
+
+  --sans:"Inter","Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Segoe UI",sans-serif;
+
+  /* 활자 척도 */
+  --t-display:clamp(54px,10.2vw,118px);
+  --t-h2:clamp(25px,3.1vw,34px);
+  --t-h3:clamp(20px,2.2vw,25px);
+  --t-lead:clamp(19px,2.05vw,26px);
+  --t-body:15px;
+  --t-small:13.5px;
+  --t-micro:11px;
+  --t-nano:10.5px;
+
+  /* 간격 척도 */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+  --sec:clamp(72px,10.5vh,120px);
+  --measure:38em;      /* 본문 한 줄 길이: 한글 약 38자 */
+  --max:1140px;
+  --pad:clamp(20px,5vw,48px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:var(--t-body);line-height:1.75;
+  letter-spacing:-0.01em;
+  word-break:keep-all;overflow-wrap:break-word;line-break:strict;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p,ul,ol,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+p,li,figcaption{text-wrap:pretty}
+h1,h2,h3,.statement,.sechead p{text-wrap:balance}
+::selection{background:var(--red);color:#fff}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+
+html[lang="ko"] .l-en{display:none !important}
+html[lang="en"] .l-ko{display:none !important}
+
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- 공통 활자 ---------- */
+.eyebrow{font-size:var(--t-micro);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-50);line-height:1.4}
+.rule{height:1px;background:var(--rule);width:100%}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+/* 분류 라벨 — 앞의 사각 점이 계열을 표시한다 */
+.cat{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:var(--t-nano);font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-50);line-height:1;white-space:nowrap;
+}
+.cat::before{content:"";width:6px;height:6px;flex:none;background:currentColor}
+.cat[data-cat="quality"]{color:var(--red-ink)}
+.cat[data-cat="web"]{color:var(--indigo)}
+.cat[data-cat="site"]{color:var(--olive)}
+
+/* ---------- 직무 탭 ---------- */
+.rolebar{display:flex;flex-wrap:wrap;align-items:center;gap:2px 22px;margin-top:clamp(24px,3.6vh,34px);padding-top:16px;border-top:1px solid var(--rule)}
+.rolebar .lab{font-size:var(--t-nano);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-30);margin-right:2px}
+.rolebar button{appearance:none;background:none;border:0;padding:5px 0 6px;font:inherit;font-size:12.5px;color:var(--ink-50);cursor:pointer;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
+.rolebar button:hover{color:var(--ink)}
+.rolebar button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--red)}
+.roleline{display:none;margin-top:14px;max-width:40em;font-size:var(--t-small);line-height:1.7;color:var(--ink-70);letter-spacing:-0.01em}
+.roleline.on{display:block}
+.roleline p{display:none}
+.roleline p.on{display:block}
+.roleline b{font-weight:600;color:var(--ink)}
+.worklist .work{transition:opacity .45s ease,filter .45s ease}
+.worklist .work[data-dim="1"]{opacity:.32;filter:grayscale(1)}
+.worklist .work[data-lead="1"]{box-shadow:inset 2px 0 0 var(--red);padding-left:clamp(14px,1.8vw,20px)}
+
+/* ---------- 링크 복사 ---------- */
+.copybtn{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:0 0 2px}
+.copybtn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.copybtn .copy-done{display:none}
+.copybtn.done{color:var(--red-ink);border-bottom-color:var(--red)}
+.copybtn.done .copy-done{display:inline}
+.copybtn.done .copy-idle{display:none}
+
+/* 강조 구문 — 스텐실 붓이 지나간 자리 */
+.mark{
+  background-image:linear-gradient(transparent 58%,var(--red-wash) 58%,var(--red-wash) 96%,transparent 96%);
+  padding:0 .08em;
+}
+
+/* 한글에는 자간을 덜 준다 — 트래킹은 라틴 대문자 라벨용 */
+html[lang="ko"] .eyebrow,
+html[lang="ko"] .idx,
+html[lang="ko"] .cat,
+html[lang="ko"] .avail,
+html[lang="ko"] .contact .ways em,
+html[lang="ko"] .cred h3,
+html[lang="ko"] .minihead span,
+html[lang="ko"] .frame .tags,
+html[lang="ko"] .work-meta .co,
+html[lang="ko"] .work .side .yr,
+html[lang="ko"] .mural figcaption,
+html[lang="ko"] .foot{letter-spacing:.04em}
+html[lang="ko"] .contact .ways em,
+html[lang="ko"] .dlrow .flag{letter-spacing:0}
+
+/* ---------- 상단 ---------- */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--red);z-index:300;transition:width .1s linear}
+.hdr{position:fixed;inset:0 0 auto 0;z-index:200;transition:background .4s ease,border-color .4s ease,backdrop-filter .4s ease;border-bottom:1px solid transparent}
+.hdr.solid{background:rgba(250,249,246,.88);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom-color:var(--rule-soft)}
+.hdr-in{display:flex;align-items:center;gap:24px;height:64px}
+.wordmark{font-weight:600;font-size:14px;letter-spacing:-0.02em;white-space:nowrap}
+.wordmark i{font-style:normal;color:var(--ink-30);margin-left:8px;font-size:var(--t-nano);letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.hdr nav{display:flex;gap:26px;margin-left:auto}
+.hdr nav a{font-size:12.5px;color:var(--ink-50);padding:4px 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s;white-space:nowrap}
+.hdr nav a:hover,.hdr nav a.active{color:var(--ink);border-bottom-color:var(--red)}
+.tools{display:flex;align-items:center;gap:14px;margin-left:6px}
+.lang{display:flex;gap:10px;font-size:var(--t-micro);letter-spacing:.1em;text-transform:uppercase}
+.lang button{appearance:none;background:none;border:0;padding:2px 0;cursor:pointer;font:inherit;color:var(--ink-30);letter-spacing:.1em;transition:color .25s;position:relative}
+.lang button[aria-pressed="true"]{color:var(--ink)}
+.lang button[aria-pressed="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--red)}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ink);color:#fff;border:1px solid var(--ink);
+  border-radius:999px;padding:10px 17px;font-size:13px;font-weight:500;line-height:1;
+  cursor:pointer;transition:transform .3s ease,background .3s ease,border-color .3s ease;white-space:nowrap;
+}
+.pill:hover{background:var(--red);border-color:var(--red);transform:translateY(-1px)}
+.pill svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.pill.small{padding:8px 14px;font-size:12px}
+.pill.ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
+.pill.ghost:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* ---------- 히어로 ---------- */
+.hero{padding:calc(64px + clamp(44px,8vh,96px)) 0 0}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:clamp(20px,3vh,32px)}
+.avail{display:inline-flex;align-items:center;gap:7px;font-size:var(--t-nano);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-70);border:1px solid var(--rule);border-radius:999px;padding:6px 11px;background:#fff}
+.avail::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);flex:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) clamp(132px,15vw,188px);gap:clamp(24px,4vw,60px);align-items:start}
+h1{
+  font-size:var(--t-display);line-height:.94;letter-spacing:-0.035em;font-weight:700;color:var(--ink);
+}
+h1 .dot{color:var(--red)}
+h1 .latin{
+  display:block;margin-top:clamp(14px,2vh,22px);
+  font-size:clamp(12px,1.25vw,15px);font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-50);
+  line-height:1.5;
+}
+html[lang="ko"] h1 .latin{font-size:clamp(12px,1.25vw,15px)}
+.statement{
+  margin-top:clamp(28px,4.2vh,42px);max-width:24em;
+  font-size:var(--t-lead);line-height:1.42;font-weight:400;letter-spacing:-0.025em;color:var(--ink);
+}
+.statement .method{
+  display:block;margin-top:14px;max-width:26em;
+  font-size:.56em;line-height:1.6;letter-spacing:-0.005em;font-weight:400;color:var(--ink-50);
+}
+.lede{margin-top:var(--s4);max-width:34em;font-size:var(--t-body);line-height:1.8;color:var(--ink-70)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:clamp(26px,4vh,38px)}
+.textlink{font-size:var(--t-small);color:var(--ink-70);border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .25s,border-color .25s;white-space:nowrap}
+.textlink:hover{color:var(--ink);border-bottom-color:var(--red)}
+.textlink.plain{border:0;color:var(--ink-50)}
+.portrait{position:relative}
+.portrait img{width:100%;aspect-ratio:912/1172;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.04)}
+.portrait figcaption{margin-top:10px;font-size:var(--t-nano);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-30);line-height:1.5}
+
+/* ---------- 수치 띠 ---------- */
+.facts{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin-top:clamp(44px,7vh,72px);
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);
+}
+.fact{padding:var(--s5) var(--s5) var(--s5) 0}
+.fact + .fact{padding-left:var(--s5);border-left:1px solid var(--rule-soft)}
+.fact .v{font-size:clamp(23px,2.5vw,32px);font-weight:600;letter-spacing:-0.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.fact .v .u{font-size:.46em;font-weight:500;color:var(--red-ink);letter-spacing:0;margin-left:1px;vertical-align:.06em}
+.fact .k{margin-top:9px;font-size:12px;color:var(--ink-50);line-height:1.55}
+
+/* ---------- 벽화 ---------- */
+.mural{padding-top:var(--sec)}
+.mural-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,236px);gap:clamp(24px,4vw,52px);align-items:end}
+.mural figure{margin:0}
+.mural img{width:100%;aspect-ratio:3/2;object-fit:cover;mix-blend-mode:multiply}
+.mural figcaption{margin-top:14px;font-size:var(--t-nano);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-30)}
+.mural .note{font-size:var(--t-small);line-height:1.85;color:var(--ink-70);padding-bottom:2px}
+.mural .note b{display:block;font-weight:600;color:var(--ink);margin-bottom:12px;font-size:var(--t-body);letter-spacing:-0.02em}
+.mural .note .sig{display:block;margin-top:16px;font-size:var(--t-nano);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-30)}
+
+/* ---------- 쇼릴 ---------- */
+.reel-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:14px}
+.reel-head .t{font-size:var(--t-nano);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-50)}
+.reel-head button{appearance:none;background:none;border:0;padding:0;cursor:pointer;font:inherit;font-size:var(--t-nano);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-30);transition:color .2s}
+.reel-head button:hover{color:var(--ink)}
+.reel{overflow-x:auto;overflow-y:hidden;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);scrollbar-width:none;-ms-overflow-style:none;cursor:grab;-webkit-overflow-scrolling:touch}
+.reel::-webkit-scrollbar{display:none}
+.reel.dragging{cursor:grabbing;user-select:none;-webkit-user-select:none}
+.reel:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.reel-track{display:flex;width:max-content}
+.frame{width:clamp(232px,25vw,296px);flex:none;padding:26px 26px 28px 0;border-right:1px solid var(--rule-soft)}
+.frame .cat{margin-bottom:14px}
+.frame .yr{font-size:var(--t-nano);letter-spacing:.14em;color:var(--ink-30);text-transform:uppercase;margin-left:10px}
+.frame h3{margin-top:10px;font-size:15.5px;font-weight:600;letter-spacing:-0.02em;line-height:1.45}
+.frame p{margin-top:7px;font-size:12.5px;line-height:1.65;color:var(--ink-50)}
+.frame .tags{margin-top:14px;font-size:var(--t-nano);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30);line-height:1.5}
+
+/* ---------- 섹션 ---------- */
+section{padding:var(--sec) 0 0;scroll-margin-top:80px}
+.sechead{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,32ch);gap:var(--s5) var(--s6);
+  align-items:end;padding-bottom:var(--s4);
+  border-bottom:1px solid var(--rule);margin-bottom:clamp(28px,4.5vh,44px);
+  position:relative;
+}
+.sechead::after{content:"";position:absolute;left:0;bottom:-1px;width:56px;height:2px;background:var(--red)}
+.sechead .idx{font-size:var(--t-micro);letter-spacing:.16em;text-transform:uppercase;color:var(--red-ink);margin-bottom:10px;white-space:nowrap}
+.sechead h2{font-size:var(--t-h2);font-weight:600;letter-spacing:-0.03em;line-height:1.16}
+.sechead h2 small{display:block;font-size:12px;font-weight:400;letter-spacing:0;color:var(--ink-50);margin-top:9px}
+.sechead p{max-width:32ch;font-size:var(--t-small);line-height:1.7;color:var(--ink-50);justify-self:end}
+
+/* ---------- 작품 ---------- */
+.work{
+  display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,232px);
+  gap:clamp(18px,3vw,44px);
+  padding:clamp(30px,4.4vh,44px) 0;border-bottom:1px solid var(--rule-soft);
+}
+.work .no{font-size:12px;letter-spacing:.12em;color:var(--ink-30);padding-top:2px;font-variant-numeric:tabular-nums}
+.work[data-cat="quality"] .no{color:var(--red-ink)}
+.work[data-cat="web"] .no{color:var(--indigo)}
+.work[data-cat="site"] .no{color:var(--olive)}
+.work-meta{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 14px;margin-bottom:12px}
+.work-meta .co{font-size:var(--t-nano);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-30)}
+.work h3{font-size:var(--t-h3);font-weight:600;letter-spacing:-0.028em;line-height:1.32}
+.work p{margin-top:var(--s3);font-size:var(--t-body);line-height:1.85;color:var(--ink-70);max-width:var(--measure)}
+.work p + p{margin-top:10px}
+.work .res{
+  margin-top:var(--s5);border-left:2px solid var(--red);padding-left:14px;
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;
+  font-size:var(--t-small);line-height:1.7;color:var(--ink);max-width:var(--measure);
+}
+.work .res b{font-size:var(--t-nano);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red-ink);white-space:nowrap}
+.work .side{padding-top:2px;font-size:12.5px;color:var(--ink-50);line-height:1.7}
+.work .side .yr{display:block;font-size:var(--t-nano);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-30);margin-bottom:10px;font-variant-numeric:tabular-nums}
+.work .side .role{display:block;color:var(--ink-70);margin-bottom:16px}
+.work .side .spec{display:grid;gap:5px;margin-top:14px;padding-top:12px;border-top:1px solid var(--rule-soft);font-size:11.5px;line-height:1.5;color:var(--ink-70);letter-spacing:0}
+.work .side a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule-soft);color:var(--ink);transition:border-color .25s,color .25s;font-size:12.5px}
+.work .side a:hover{border-bottom-color:var(--red);color:var(--red-ink)}
+.work .side a svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.7;flex:none}
+.work .side .tags{margin-top:18px;font-size:var(--t-nano);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30);line-height:1.9}
+/* ---------- 경력 ---------- */
+.cv table{width:100%;border-collapse:collapse;font-size:14px}
+.cv thead th{text-align:left;font-size:var(--t-nano);font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-30);padding:0 14px 11px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+.cv tbody td{padding:15px 14px 15px 0;border-bottom:1px solid var(--rule-soft);color:var(--ink-70);vertical-align:baseline;line-height:1.6}
+.cv tbody tr:hover td{color:var(--ink)}
+.cv .p{font-size:12.5px;color:var(--ink-50);white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:0}
+.cv .co{color:var(--ink);font-weight:500}
+.cv .ty{font-size:11.5px;color:var(--ink-30);white-space:nowrap}
+.cvnote{margin-top:var(--s4);font-size:12px;color:var(--ink-50)}
+details.job{border-bottom:1px solid var(--rule-soft)}
+details.job summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:17px 0;cursor:pointer;list-style:none}
+details.job summary::-webkit-details-marker{display:none}
+details.job summary .co{font-size:15px;font-weight:500;letter-spacing:-0.02em;color:var(--ink)}
+details.job summary .ro{font-size:13px;color:var(--ink-50)}
+details.job summary .p{margin-left:auto;font-size:12px;color:var(--ink-30);white-space:nowrap;font-variant-numeric:tabular-nums}
+details.job summary .sign{position:relative;width:11px;height:11px;flex:none;margin-left:8px;transition:transform .3s ease}
+details.job summary .sign::before,details.job summary .sign::after{content:"";position:absolute;background:var(--ink-30);transition:opacity .3s ease,background .3s ease}
+details.job summary .sign::before{left:0;right:0;top:5px;height:1px}
+details.job summary .sign::after{top:0;bottom:0;left:5px;width:1px}
+details.job summary:hover .sign::before,details.job summary:hover .sign::after{background:var(--red)}
+details.job[open] summary .sign::after{opacity:0}
+details.job .body{padding:0 0 24px;max-width:var(--measure)}
+details.job ul{display:grid;gap:8px;margin-bottom:10px}
+details.job ul:last-child{margin-bottom:0}
+details.job li{position:relative;padding-left:15px;font-size:13.8px;line-height:1.75;color:var(--ink-70)}
+details.job li::before{content:"";position:absolute;left:0;top:12px;width:5px;height:1px;background:var(--ink-30)}
+.minihead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:clamp(36px,5vh,56px) 0 2px;padding-bottom:11px;border-bottom:1px solid var(--rule)}
+.minihead span{font-size:var(--t-micro);letter-spacing:.15em;text-transform:uppercase;color:var(--ink-30)}
+
+/* ---------- 역량 ---------- */
+.skillgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(36px,6vw,80px)}
+.skill{padding:24px 0;border-bottom:1px solid var(--rule-soft)}
+.skill h3{font-size:15.5px;font-weight:600;letter-spacing:-0.02em;display:flex;align-items:baseline;gap:10px}
+.skill h3 span:first-child{font-weight:400;color:var(--ink-30);font-size:11.5px;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.skill p{margin-top:8px;font-size:var(--t-small);line-height:1.75;color:var(--ink-70)}
+.skill .where{margin-top:10px;font-size:var(--t-nano);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30)}
+
+/* ---------- 자격 ---------- */
+.cred{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.cred h3{font-size:var(--t-micro);letter-spacing:.15em;text-transform:uppercase;color:var(--ink-50);padding-bottom:10px;border-bottom:1px solid var(--rule);margin-bottom:16px;font-weight:500}
+.cred h3 + ul + h3{margin-top:26px}
+.cred ul{display:grid;gap:10px}
+.cred li{font-size:var(--t-small);line-height:1.6;color:var(--ink-70);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:baseline}
+.cred li b{font-weight:400;color:var(--ink)}
+.cred li em{font-style:normal;font-size:11.5px;color:var(--ink-30);white-space:nowrap;font-variant-numeric:tabular-nums}
+.cred .lic-note{font-size:11.5px;line-height:1.55;color:var(--ink-30);margin-top:10px;letter-spacing:-.005em}
+
+/* ---------- 자기소개 ---------- */
+.letter{max-width:var(--measure)}
+.litem{display:grid;grid-template-columns:44px minmax(0,1fr);gap:clamp(12px,2vw,24px);padding:clamp(26px,4vh,34px) 0;border-bottom:1px solid var(--rule-soft)}
+.litem:last-child{border-bottom:0}
+.litem .n{font-size:var(--t-micro);letter-spacing:.14em;color:var(--ink-30);padding-top:6px;font-variant-numeric:tabular-nums}
+.litem h3{font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:-0.025em;line-height:1.4;margin-bottom:12px}
+.litem p{font-size:14.4px;line-height:1.9;color:var(--ink-70)}
+.litem p + p{margin-top:11px}
+.litem p.lead{font-size:16px;line-height:1.65;color:var(--ink);font-weight:500;letter-spacing:-0.02em;margin-bottom:12px}
+
+/* ---------- 파일 ---------- */
+.dl{border-top:1px solid var(--rule)}
+.dlrow{display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:clamp(16px,3vw,32px);align-items:center;padding:23px 0;border-bottom:1px solid var(--rule-soft)}
+.dlrow .flag{font-size:var(--t-nano);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-30)}
+.dlrow h3{font-size:15.5px;font-weight:600;letter-spacing:-0.02em}
+.dlrow p{margin-top:4px;font-size:12.5px;color:var(--ink-50);line-height:1.6}
+.dlrow a,.dlrow button{appearance:none;background:none;border:0;font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .25s,border-color .25s;white-space:nowrap}
+.dlrow a:hover,.dlrow button:hover{color:var(--red-ink);border-bottom-color:var(--red)}
+.dlrow svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+/* ---------- 연락 ---------- */
+.contact{margin-top:clamp(80px,13vh,140px);padding-top:0;border:0}
+.contact>.wrap{border-top:1px solid var(--ink);padding-top:clamp(44px,6vh,68px);position:relative}
+.contact>.wrap::before{content:"";position:absolute;left:0;top:-1px;width:56px;height:2px;background:var(--red)}
+.contact .eyebrow{margin-bottom:24px;color:var(--red-ink)}
+.contact h2{font-size:clamp(28px,4.4vw,46px);font-weight:600;letter-spacing:-0.035em;line-height:1.18;max-width:20em}
+.contact .ways{display:flex;flex-wrap:wrap;gap:16px 48px;margin-top:clamp(28px,4vh,40px)}
+.contact .ways a{font-size:clamp(17px,2.1vw,22px);font-weight:500;letter-spacing:-0.02em;border-bottom:1px solid var(--rule);padding-bottom:5px;transition:color .3s,border-color .3s;white-space:nowrap}
+.contact .ways a:hover{color:var(--red);border-bottom-color:var(--red)}
+.contact .ways em{font-style:normal;display:block;font-size:var(--t-nano);font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-30);margin-bottom:10px}
+.contact .lede{margin-top:clamp(26px,3.5vh,34px);max-width:36em}
+
+footer{padding:clamp(48px,7vh,76px) 0 40px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:var(--t-micro);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-30)}
+.foot a:hover{color:var(--ink)}
+
+/* ---------- 등장 ---------- */
+.rise{opacity:0;transform:translateY(12px);transition:opacity .8s cubic-bezier(.16,.84,.28,1),transform .8s cubic-bezier(.16,.84,.28,1)}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;transition:none}
+  .reel-track{animation:none !important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- 반응형 ---------- */
+@media (max-width:980px){
+  .sechead{grid-template-columns:1fr;gap:12px}
+  .sechead p{justify-self:start;max-width:34em}
+}
+@media (max-width:900px){
+  .hdr nav{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .portrait{width:112px;order:-1}
+  .portrait figcaption{display:none}
+  .statement{max-width:22em}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .fact{padding:18px 0}
+  .fact + .fact{padding-left:0;border-left:0}
+  .fact:nth-child(2n){padding-left:20px;border-left:1px solid var(--rule-soft)}
+  .fact:nth-child(n+3){border-top:1px solid var(--rule-soft)}
+  .mural-grid{grid-template-columns:1fr;gap:24px;align-items:start}
+  .work{grid-template-columns:1fr;gap:14px}
+  .work .no{display:none}
+  .work .side{padding-top:0}
+  .skillgrid{grid-template-columns:1fr}
+  .cred{grid-template-columns:repeat(2,1fr);gap:28px}
+  .dlrow{grid-template-columns:1fr;gap:10px}
+}
+@media (max-width:600px){
+  .hero-top{flex-direction:column;align-items:flex-start;gap:10px}
+  .avail{align-self:flex-start;white-space:normal;line-height:1.5;text-align:left}
+  /* 상세 경력 요약: 회사·기간 / 직무·토글 두 줄로 */
+  details.job summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 10px;align-items:baseline}
+  details.job summary .co{grid-column:1;grid-row:1}
+  details.job summary .p{grid-column:2;grid-row:1;margin-left:0;text-align:right}
+  details.job summary .ro{grid-column:1;grid-row:2;font-size:12.5px}
+  details.job summary .sign{grid-column:2;grid-row:2;justify-self:end;margin-left:0}
+  /* 경력 표 → 모바일에서는 한 줄 카드로 */
+  .cv table,.cv tbody,.cv tr,.cv td{display:block;width:auto}
+  .cv thead{display:none}
+  .cv tbody tr{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:2px 12px;padding:14px 0;border-bottom:1px solid var(--rule-soft)}
+  .cv tbody td{border:0;padding:0;font-size:13.5px}
+  .cv tbody td.p{grid-column:2;grid-row:1;text-align:right;font-size:12px}
+  .cv tbody td.co{grid-column:1;grid-row:1}
+  .cv tbody td:nth-child(3){grid-column:1/3;grid-row:2;margin-top:3px;font-size:13px;color:var(--ink-50)}
+  .cv tbody td.ty{display:none}
+  .litem{grid-template-columns:1fr;gap:8px}
+  .litem .n{padding-top:0}
+  .cred{grid-template-columns:1fr}
+  .frame{width:232px;padding:22px 22px 24px 0}
+  .wordmark i{display:none}
+  .contact .ways{gap:22px}
+}
+
+/* ---------- 인쇄 ---------- */
+/* A4 한 장의 글자 폭 180mm ≈ 680px. 화면용 격자를 인쇄 폭에 맞춰 다시 짠다.
+   ① 쪽을 꽉 채운다 — 긴 덩어리는 쪽을 넘어가도 되고, 작은 단위(표 행·결과 상자)만 쪼개지 않는다.
+   ② 세로 여백은 손잡이 두 개로만 조절한다.
+      --p-air   : 섹션·항목 사이 여백과 표 셀 여백의 배율 (국문 1.1 / 영문 .97)
+      --p-close : 마무리 블록(연락·꼬리말) 여백의 가감 (국문 +9mm / 영문 -8mm — 영문은 문단이 길어 조인다)
+   ③ 줄간격은 배율을 곱하지 않고 1.45~1.65배 안에 고정한다(문서 검증 프로토콜 2장 5항).
+   주의 1: 인쇄 폭은 794px 이라 화면용 @media(max-width:900px) 규칙이 같이 걸린다.
+          그래서 .work .no{display:none} 처럼 격자 열을 어긋나게 만드는 규칙을 여기서 되돌린다.
+   주의 2: 크로미움은 격자(grid)·다단(columns) 한 줄을 쪽 경계에서 쪼개지 못한다.
+          .work 와 .litem 은 인쇄에서만 블록 흐름으로 바꿔 본문이 쪽을 넘어가게 하고,
+          기간·직무·도구는 항목 끝 한 줄(.work .side)로 내린다. 정보는 그대로다. */
+@page{size:A4;margin:13mm 14mm}
+@media print{
+  :root{--p-air:1.1;--p-close:9mm;--bg:#fff;--paper:#fff;--paper-2:#fff;--ink:#111;--ink-80:#222;--ink-70:#333;--ink-50:#555;--ink-30:#6f6b66;--rule:#c8c4bc;--rule-soft:#e3e0da;--red:#b52d15;--red-ink:#b52d15;--indigo:#20375a;--olive:#3f4a2c}
+  html[lang="en"]{--p-air:.97;--p-close:-8mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{width:auto;height:auto;background:#fff}
+  body{font-size:9pt;line-height:1.5;color:var(--ink)}
+  /* 화면 전용 장치 — 인쇄에서 뺀다 */
+  #progress,.hdr,.reel-head,.reel,.hero-actions,.mural,.foot nav,.avail,.rolebar,.roleline,.copybtn,#download,.portrait figcaption{display:none !important}
+  /* 쇼릴 머리 래퍼의 인라인 padding-top 은 안의 요소를 숨겨도 남는다 — 1쪽에 24mm 빈 띠가 생기므로 지운다 */
+  .reel-top{padding-top:0 !important}
+  .rise{opacity:1 !important;transform:none !important}
+  .worklist .work[data-dim="1"]{opacity:1 !important;filter:none !important}
+  .worklist .work[data-lead="1"]{box-shadow:none !important;padding-left:0 !important}
+  .wrap{max-width:none;padding:0}
+  /* 쪽 나눔 */
+  section{break-inside:auto;padding-top:0}
+  section + section{padding-top:calc(8mm * var(--p-air))}
+  h1,h2,h3,summary,.sechead,.minihead,.work-meta{break-after:avoid}
+  h1,h2,h3,summary,figure,tr,.res,.skill,.fact,details.job .body{break-inside:avoid}
+  p,li{orphans:2;widows:2}
+
+  /* 히어로 — 사진을 인쇄에도 넣고 높이를 줄인다 */
+  .hero{padding:0 0 calc(5mm * var(--p-air));border-bottom:1px solid var(--ink)}
+  .hero-top{margin-bottom:4mm}
+  .eyebrow{font-size:6.8pt}
+  .hero-grid{grid-template-columns:minmax(0,1fr) 30mm;gap:7mm;align-items:start}
+  .portrait{display:block;width:30mm;order:0;margin:0;padding:0}
+  .portrait img{width:100%;height:auto;display:block;border:1px solid var(--rule)}
+  h1{font-size:25pt;line-height:1.02}
+  h1 .latin{font-size:8pt;margin-top:2mm}
+  .statement{font-size:11pt;line-height:1.42;margin-top:4mm;max-width:none}
+  .statement .method{display:block;font-size:8pt;margin-top:2mm}
+  .lede{font-size:8.4pt;line-height:1.55;margin-top:2.5mm;max-width:none}
+  .facts{margin-top:4mm;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule)}
+  .fact{padding:2mm 3mm 2mm 0 !important;border:0 !important}
+  .fact + .fact{padding-left:3mm !important;border-left:1px solid var(--rule-soft) !important}
+  .fact .v{font-size:11pt}
+  .fact .k{display:block;font-size:6.6pt;margin-top:.6mm}
+
+  /* 섹션 머리 */
+  .sechead{display:block;margin:0 0 calc(3mm * var(--p-air));padding-bottom:1.5mm;border-bottom:1px solid var(--ink);break-inside:avoid}
+  /* 제목 바로 뒤 첫 항목은 위 여백을 지운다 — 남은 자리에 첫 줄이라도 들어가 제목이 쪽 끝에 홀로 남지 않게 */
+  .sechead + * > :first-child{padding-top:0}
+  .sechead .idx{font-size:6.6pt;margin-bottom:1mm}
+  .sechead h2{font-size:13.5pt;line-height:1.2}
+  .sechead h2 small{display:inline;font-size:7.2pt;margin:0 0 0 4mm}
+  .sechead p{font-size:7.2pt;line-height:1.5;margin-top:1.2mm;max-width:none;text-align:left;justify-self:start}
+
+  /* 작품 — 격자·플로트는 쪽 경계에서 쪼개지지 않거나 어긋나므로 블록 흐름으로 바꾼다.
+     번호는 첫 줄에, 기간·직무·도구는 항목 끝 한 줄로 내린다(정보는 그대로). */
+  .work{display:block;position:relative;padding:calc(5.2mm * var(--p-air)) 0 calc(5.6mm * var(--p-air)) 8mm;break-inside:auto}
+  .work .no{display:block;float:left;width:8mm;margin-left:-8mm;font-size:6.8pt}
+  .work-meta{display:flex;flex-wrap:wrap;gap:3px 8px;margin:0;break-after:avoid}
+  .work-meta .co,.work .cat{font-size:6.6pt}
+  .work h3{font-size:10.5pt;margin-top:1.4mm}
+  .work p{font-size:8pt;line-height:1.55;margin-top:1.8mm;max-width:none}
+  .work p + p{margin-top:1.5mm}
+  .work .res{margin-top:2.5mm;padding-left:3mm;font-size:7.8pt;line-height:1.5;max-width:none;gap:2px 8px}
+  .work .res b{font-size:6.6pt}
+  .work .side{display:flex;flex-wrap:wrap;align-items:baseline;gap:1px 5mm;margin-top:2mm;padding-top:1.2mm;border-top:1px solid var(--rule-soft);font-size:6.7pt;line-height:1.5;color:var(--ink-50)}
+  .work .side > *{display:block;margin:0;padding:0;border:0;font-size:inherit;line-height:inherit;letter-spacing:0;text-transform:none;color:inherit}
+  .work .side .spec{display:flex;flex-wrap:wrap;gap:1px 5mm;margin:0;padding:0;border:0}
+  .work .side .tags{margin:0;font-size:inherit;letter-spacing:0;text-transform:none;color:inherit}
+  .work .side a{align-items:baseline;padding:0;border:0;font-size:inherit}
+  .work .side a svg{display:none}
+
+  /* 경력 */
+  #cv .cv > div{overflow:visible !important}
+  .cv table{font-size:7.8pt}
+  .cv thead th{padding:0 3mm 1.5mm 0;font-size:6.6pt}
+  .cv tbody td{padding:calc(2.1mm * var(--p-air)) 3mm;line-height:1.45}
+  .cv tbody td:last-child{padding-right:0}
+  .cv .p,.cv .ty{font-size:7.2pt}
+  .cvnote{margin-top:2mm;font-size:7pt}
+  .minihead{margin:calc(6mm * var(--p-air)) 0 0;padding-bottom:1.5mm}
+  .minihead span{font-size:6.6pt}
+  details.job summary{padding:calc(2.2mm * var(--p-air)) 0;gap:2px 6mm}
+  details.job summary .co{font-size:9pt}
+  details.job summary .ro{font-size:7.6pt}
+  details.job summary .p{font-size:7.2pt}
+  details.job summary .sign{display:none}
+  details.job .body{padding:0 0 3mm;max-width:none}
+  details.job ul{gap:1mm;margin-bottom:1.5mm}
+  details.job li{font-size:7.6pt;line-height:1.5;padding-left:4mm}
+  details.job li::before{top:2.1mm;width:2mm}
+
+  /* 역량 */
+  .skillgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 7mm}
+  .skill{padding:calc(4mm * var(--p-air)) 0}
+  .skill h3{font-size:9pt}
+  .skill h3 span:first-child{font-size:7pt}
+  .skill p{margin-top:1.2mm;font-size:7.8pt;line-height:1.5}
+  .skill .where{margin-top:1mm;font-size:6.6pt;letter-spacing:.06em}
+
+  /* 자격 */
+  .cred{display:block;columns:2;column-gap:10mm}
+  .cred > div{margin-bottom:calc(5.5mm * var(--p-air));break-inside:avoid}
+  .cred h3{font-size:7.2pt;padding-bottom:1.2mm;margin-bottom:2mm}
+  .cred h3 + ul + h3{margin-top:4mm}
+  .cred ul{gap:1.5mm}
+  .cred li{font-size:8pt;line-height:1.45;gap:4mm}
+  .cred li em{font-size:6.8pt}
+  .cred .lic-note{font-size:7pt;line-height:1.45;margin-top:1.5mm}
+
+  /* 자기소개 — 블록 흐름(격자는 쪽을 넘지 못한다) */
+  .letter{max-width:none}
+  .litem{display:block;padding:calc(6mm * var(--p-air)) 0 calc(6.2mm * var(--p-air)) 10mm;break-inside:auto}
+  .litem .n{position:static;font-size:6.8pt;letter-spacing:.14em;margin-bottom:1.2mm}
+  .litem h3{font-size:10pt;line-height:1.3;margin-bottom:1.8mm}
+  .litem p{font-size:8pt;line-height:1.6}
+  .litem p + p{margin-top:1.5mm}
+  .litem p.lead{font-size:8.6pt;line-height:1.45;margin-bottom:1.5mm}
+
+  /* 연락 */
+  .contact{margin-top:0;padding-top:calc(9mm * var(--p-air))}
+  .contact>.wrap{border-top:1px solid var(--ink);padding-top:calc(6mm * var(--p-air))}
+  .contact .eyebrow{margin-bottom:2mm;font-size:6.8pt}
+  .contact h2{font-size:15pt;line-height:1.2}
+  .contact .ways{margin-top:max(0mm, calc(4mm * var(--p-air) + var(--p-close) * .25));gap:3mm 12mm}
+  .contact .ways a{font-size:10pt;padding-bottom:1mm}
+  .contact .ways em{font-size:6.6pt;margin-bottom:1mm}
+  .contact .lede{margin-top:max(0mm, calc(3mm * var(--p-air) + var(--p-close) * .25));max-width:none;font-size:8.2pt}
+  footer{padding:max(0mm, calc(3.5mm * var(--p-air) + var(--p-close) * .5)) 0 0}
+  .foot{font-size:6.6pt;border-top:1px solid var(--rule-soft);padding-top:2mm;letter-spacing:.06em}
+}
+</style>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="wordmark" href="#top"><span class="l-ko">강은성</span><span class="l-en">Eunsung Kang</span><i>CV 2026</i></a>
+    <nav aria-label="Sections">
+      <a href="#works"><span class="l-ko">작품</span><span class="l-en">Works</span></a>
+      <a href="#cv"><span class="l-ko">경력</span><span class="l-en">CV</span></a>
+      <a href="#skills"><span class="l-ko">역량</span><span class="l-en">Skills</span></a>
+      <a href="#cred"><span class="l-ko">자격</span><span class="l-en">Credentials</span></a>
+      <a href="#letter"><span class="l-ko">자기소개</span><span class="l-en">Letter</span></a>
+      <a href="#download"><span class="l-ko">PDF</span><span class="l-en">PDF</span></a>
+    </nav>
+    <div class="tools">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-setlang="ko" aria-pressed="true">KR</button>
+        <button type="button" data-setlang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="pill small" href="#download">
+        <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4M12 15l-4-4"/><path d="M5 19h14"/></svg>
+        <span class="l-ko">이력서</span><span class="l-en">Résumé</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="eyebrow">
+        <span class="l-ko">이력서 2026 · 품질·공무·현장 운영</span>
+        <span class="l-en">Résumé 2026 · Quality · Site · Field</span>
+      </div>
+      <span class="avail"><span class="l-ko">구직 중·즉시 입사 가능</span><span class="l-en">Open to work · immediate start</span></span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1>
+          <span class="l-ko">강은성<span class="dot">.</span></span>
+          <span class="l-en">Eunsung Kang<span class="dot">.</span></span>
+          <span class="latin"><span class="l-ko">Eunsung Kang</span><span class="l-en">Quality · Site administration</span></span>
+        </h1>
+
+        <p class="statement">
+          <span class="l-ko">기준이 없어 흔들리는 현장에<br>선을 그어 왔습니다.</span>
+          <span class="l-en">Where the standard was missing,<br>I drew the line.</span>
+          <span class="method l-ko">기준을 세우고, 글로 남기고, 숫자로 확인합니다.</span>
+          <span class="method l-en">Set it, write it down, check it with numbers.</span>
+        </p>
+
+        <p class="lede">
+          <span class="l-ko">17년 5개월, 여덟 개 사업장. 태양광 공무, 유리 품질 검사, 자동차 생산라인, 병원 전산, 그리고 회사 홈페이지 두 개. 제품과 직함은 매번 달라졌지만 하는 일은 같았습니다 — 문제를 눈으로 확인하고, 기준을 글로 남기고, <span class="mark">끝까지 확인하는 일</span>.</span>
+          <span class="l-en">Seventeen years and five months, eight employers: photovoltaic site administration, glass quality inspection, vehicle assembly, hospital IT, and two corporate websites. The product and the title changed every time. The work did not — see the problem, set the standard in writing, <span class="mark">follow it to the end</span>.</span>
+        </p>
+
+        <div class="hero-actions">
+          <a class="pill" href="#download">
+            <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4M12 15l-4-4"/><path d="M5 19h14"/></svg>
+            <span class="l-ko">이력서 PDF 받기</span><span class="l-en">Download résumé</span>
+          </a>
+          <a class="textlink" href="mailto:devgru.kang@gmail.com">devgru.kang@gmail.com</a>
+          <a class="textlink" href="tel:+821041480120">010-4148-0120</a>
+          <span class="textlink plain"><span class="l-ko">충남 아산시</span><span class="l-en">Asan-si, Korea</span></span>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <img src="assets/photo.jpg" alt="강은성 증명사진 / Eunsung Kang, portrait" width="912" height="1172" fetchpriority="high">
+        <figcaption><span class="l-ko">증명사진 · 2026</span><span class="l-en">Portrait · 2026</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="facts rise">
+      <div class="fact">
+        <div class="v">17<span class="u l-ko">년</span><span class="u l-en">yrs</span> 5<span class="u l-ko">개월</span><span class="u l-en">mos</span></div>
+        <div class="k"><span class="l-ko">총 경력·전 직장 정규직</span><span class="l-en">Total experience, all full-time</span></div>
+      </div>
+      <div class="fact">
+        <div class="v">8<span class="u l-ko">개 사업장</span><span class="u l-en">employers</span></div>
+        <div class="k"><span class="l-ko">계약직·파견 없음</span><span class="l-en">No contracts, no dispatch</span></div>
+      </div>
+      <div class="fact">
+        <div class="v">6<span class="u l-ko">년</span><span class="u l-en">yrs</span> 11<span class="u l-ko">개월</span><span class="u l-en">mos</span></div>
+        <div class="k"><span class="l-ko">한 라인 최장 근속·쌍용차</span><span class="l-en">Longest single post, assembly</span></div>
+      </div>
+      <div class="fact">
+        <div class="v">2<span class="u l-ko">건</span><span class="u l-en">Corporate Websites</span></div>
+        <div class="k"><span class="l-ko">본사·자회사 웹사이트 구축 총괄</span><span class="l-en">PM &amp; Launch</span></div>
+      </div>
+    </div>
+
+    <div class="rolebar" role="group" aria-label="직무별로 보기 / View by role">
+      <span class="lab"><span class="l-ko">직무별로 보기</span><span class="l-en">View by role</span></span>
+      <button type="button" data-role="all" aria-pressed="true"><span class="l-ko">전체</span><span class="l-en">All</span></button>
+      <button type="button" data-role="quality" aria-pressed="false"><span class="l-ko">품질관리</span><span class="l-en">Quality</span></button>
+      <button type="button" data-role="site" aria-pressed="false"><span class="l-ko">공무·현장</span><span class="l-en">Site · Field</span></button>
+      <button type="button" data-role="ops" aria-pressed="false"><span class="l-ko">웹·총괄</span><span class="l-en">Web · PM</span></button>
+    </div>
+    <div class="roleline" id="roleline">
+      <p data-r="quality"><span class="l-ko"><b>품질관리</b> — 불량 판정의 흔들림을 코드와 절차서로 멈춰 세우는 품질 실무자</span><span class="l-en"><b>Quality</b> — the inspector who stops drift in defect calls with codes and a written procedure</span></p>
+      <p data-r="site"><span class="l-ko"><b>공무·현장</b> — 인허가·자재·협력사 일정을 표 하나로 묶어 공정을 돌리는 현장 공무</span><span class="l-en"><b>Site · Field</b> — permits, materials and contractor schedules held in one sheet so the site keeps moving</span></p>
+      <p data-r="ops"><span class="l-ko"><b>웹·총괄</b> — 외주 개발사 선정·계약·일정부터 콘텐츠와 디자인 방향까지 총괄한 웹 구축 PM</span><span class="l-en"><b>Web · PM</b> — vendor selection, contract, schedule, content and design direction: two corporate websites, PM and launch</span></p>
+    </div>
+  </div>
+
+  <!-- MURAL -->
+  <div class="wrap mural">
+    <div class="mural-grid rise">
+      <figure>
+        <img src="assets/mural.jpg" alt="스텐실 벽화: 작업복을 입은 사람이 벽에 붉은 선을 긋고 있다 / Stencil mural: a worker painting a straight red line across a wall" width="1536" height="1024" loading="lazy">
+        <figcaption><span class="l-ko">《선》 · 스텐실, 2026 · 이 페이지를 위해 그린 그림</span><span class="l-en">“The Line” · stencil, 2026 · drawn for this page</span></figcaption>
+      </figure>
+      <div class="note">
+        <b class="l-ko">벽에 선을 긋는 일</b><b class="l-en">Drawing the line</b>
+        <span class="l-ko">검사자마다 다르던 판정, 서류와 현장 사이에서 끊기던 일, 다음 사람이 다시 배워야 했던 것. 셋 다 누군가 게을러서 생긴 일이 아닙니다. 기준이 어디인지 아무도 긋지 않았기 때문에 생긴 일입니다. 저는 그 선을 긋는 쪽으로 17년을 일해 왔습니다.</span>
+        <span class="l-en">Differing inspection calls, work that stopped between the document and the floor, knowledge the next person had to learn again — none of that happened because anyone was careless. It happened because nobody had drawn the line. That is the side of the work I have been on for seventeen years.</span>
+        <span class="sig"><span class="l-ko">— 강은성</span><span class="l-en">— Eunsung Kang</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REEL -->
+<div class="wrap reel-top" style="padding-top:clamp(52px,8vh,92px)">
+  <div class="reel-head">
+    <div class="t"><span class="l-ko">쇼릴 — 8개 사업장, 여섯 장면</span><span class="l-en">Showreel — eight workplaces, six frames</span></div>
+    <button type="button" id="reelToggle" aria-pressed="false"><span class="l-ko">일시정지</span><span class="l-en">Pause</span></button>
+  </div>
+</div>
+<div class="reel" id="reel" tabindex="0" role="region" aria-label="작업 사례 쇼릴 — 좌우로 밀어 보세요 / Work showreel, drag sideways">
+  <div class="reel-track" id="reelTrack">
+    <a class="frame" href="#works">
+      <div><span class="cat" data-cat="quality"><span class="l-ko">품질</span><span class="l-en">Quality</span></span><span class="yr">2023 – 2024</span></div>
+      <h3 class="l-ko">판정을 코드로</h3><h3 class="l-en">Judgement, coded</h3>
+      <p class="l-ko">코닝정밀소재 외포장과. 다르던 판정을 불량 유형 코드와 Excel VBA 집계로 하나로.</p>
+      <p class="l-en">Corning Precision Materials. Defect codes and Excel VBA made one standard out of differing calls.</p>
+      <div class="tags">Excel VBA · QC Tools · ISO</div>
+    </a>
+    <a class="frame" href="#works">
+      <div><span class="cat" data-cat="web"><span class="l-ko">웹</span><span class="l-en">Web</span></span><span class="yr">2025 – 2026</span></div>
+      <h3 class="l-ko">두 개의 문</h3><h3 class="l-en">Two websites</h3>
+      <p class="l-ko">본사와 자회사 홈페이지 2건. 제작사 선정부터 콘텐츠와 디자인 방향까지.</p>
+      <p class="l-en">Two corporate sites: vendor, contract, content and design direction.</p>
+      <div class="tags">Web · Content · Design</div>
+    </a>
+    <a class="frame" href="#works">
+      <div><span class="cat" data-cat="site"><span class="l-ko">현장</span><span class="l-en">Field</span></span><span class="yr">2025 – 2026</span></div>
+      <h3 class="l-ko">서류와 자재</h3><h3 class="l-en">Permits &amp; parts</h3>
+      <p class="l-ko">태양광 공무. 인허가·기관 협의, 자재 수급, 시공사 일정.</p>
+      <p class="l-en">Photovoltaic site administration: permits, materials, contractor schedules.</p>
+      <div class="tags">Permits · Excel · AutoCAD</div>
+    </a>
+    <a class="frame" href="#cv">
+      <div><span class="cat"><span class="l-ko">생산</span><span class="l-en">Assembly</span></span><span class="yr">2012 – 2019</span></div>
+      <h3 class="l-ko">6년 11개월의 라인</h3><h3 class="l-en">Six years eleven months</h3>
+      <p class="l-ko">쌍용자동차 생산조립 2라인. 병목, 부품 품질, 협력사 대책 추적.</p>
+      <p class="l-en">SsangYong assembly line 2: bottlenecks, parts quality, supplier follow-up.</p>
+      <div class="tags">SAP ERP · Lean</div>
+    </a>
+    <a class="frame" href="#cv">
+      <div><span class="cat"><span class="l-ko">전산</span><span class="l-en">IT</span></span><span class="yr">2009 – 2012</span></div>
+      <h3 class="l-ko">병원의 전산망</h3><h3 class="l-en">The hospital network</h3>
+      <p class="l-ko">박애의료재단 전산시설관리과 팀장. 서버·네트워크·HIS, 장애 대응.</p>
+      <p class="l-en">Bakae Medical Foundation, team leader: servers, network, HIS, fault response.</p>
+      <div class="tags">Cisco · MySQL · HIS</div>
+    </a>
+    <a class="frame" href="#letter">
+      <div><span class="cat"><span class="l-ko">촬영</span><span class="l-en">Photo</span></span><span class="yr">2005 – 2009</span></div>
+      <h3 class="l-ko">색을 맞추는 일</h3><h3 class="l-en">Holding the colour</h3>
+      <p class="l-ko">카르마 스튜디오 촬영팀. 상업사진과 색상 보정, 납기 관리.</p>
+      <p class="l-en">KARMA STUDIO: commercial photography, colour correction, deadlines.</p>
+      <div class="tags">Photoshop · Lightroom</div>
+    </a>
+    <a class="frame" href="#works" aria-hidden="true" tabindex="-1">
+      <div><span class="cat" data-cat="quality"><span class="l-ko">품질</span><span class="l-en">Quality</span></span><span class="yr">2023 – 2024</span></div>
+      <h3 class="l-ko">판정을 코드로</h3><h3 class="l-en">Judgement, coded</h3>
+      <p class="l-ko">코닝정밀소재 외포장과. 다르던 판정을 불량 유형 코드와 Excel VBA 집계로 하나로.</p>
+      <p class="l-en">Corning Precision Materials. Defect codes and Excel VBA made one standard out of differing calls.</p>
+      <div class="tags">Excel VBA · QC Tools · ISO</div>
+    </a>
+    <a class="frame" href="#works" aria-hidden="true" tabindex="-1">
+      <div><span class="cat" data-cat="web"><span class="l-ko">웹</span><span class="l-en">Web</span></span><span class="yr">2025 – 2026</span></div>
+      <h3 class="l-ko">두 개의 문</h3><h3 class="l-en">Two websites</h3>
+      <p class="l-ko">본사와 자회사 홈페이지 2건. 제작사 선정부터 콘텐츠와 디자인 방향까지.</p>
+      <p class="l-en">Two corporate sites: vendor, contract, content and design direction.</p>
+      <div class="tags">Web · Content · Design</div>
+    </a>
+    <a class="frame" href="#works" aria-hidden="true" tabindex="-1">
+      <div><span class="cat" data-cat="site"><span class="l-ko">현장</span><span class="l-en">Field</span></span><span class="yr">2025 – 2026</span></div>
+      <h3 class="l-ko">서류와 자재</h3><h3 class="l-en">Permits &amp; parts</h3>
+      <p class="l-ko">태양광 공무. 인허가·기관 협의, 자재 수급, 시공사 일정.</p>
+      <p class="l-en">Photovoltaic site administration: permits, materials, contractor schedules.</p>
+      <div class="tags">Permits · Excel · AutoCAD</div>
+    </a>
+    <a class="frame" href="#cv" aria-hidden="true" tabindex="-1">
+      <div><span class="cat"><span class="l-ko">생산</span><span class="l-en">Assembly</span></span><span class="yr">2012 – 2019</span></div>
+      <h3 class="l-ko">6년 11개월의 라인</h3><h3 class="l-en">Six years eleven months</h3>
+      <p class="l-ko">쌍용자동차 생산조립 2라인. 병목, 부품 품질, 협력사 대책 추적.</p>
+      <p class="l-en">SsangYong assembly line 2: bottlenecks, parts quality, supplier follow-up.</p>
+      <div class="tags">SAP ERP · Lean</div>
+    </a>
+    <a class="frame" href="#cv" aria-hidden="true" tabindex="-1">
+      <div><span class="cat"><span class="l-ko">전산</span><span class="l-en">IT</span></span><span class="yr">2009 – 2012</span></div>
+      <h3 class="l-ko">병원의 전산망</h3><h3 class="l-en">The hospital network</h3>
+      <p class="l-ko">박애의료재단 전산시설관리과 팀장. 서버·네트워크·HIS, 장애 대응.</p>
+      <p class="l-en">Bakae Medical Foundation, team leader: servers, network, HIS, fault response.</p>
+      <div class="tags">Cisco · MySQL · HIS</div>
+    </a>
+    <a class="frame" href="#letter" aria-hidden="true" tabindex="-1">
+      <div><span class="cat"><span class="l-ko">촬영</span><span class="l-en">Photo</span></span><span class="yr">2005 – 2009</span></div>
+      <h3 class="l-ko">색을 맞추는 일</h3><h3 class="l-en">Holding the colour</h3>
+      <p class="l-ko">카르마 스튜디오 촬영팀. 상업사진과 색상 보정, 납기 관리.</p>
+      <p class="l-en">KARMA STUDIO: commercial photography, colour correction, deadlines.</p>
+      <div class="tags">Photoshop · Lightroom</div>
+    </a>
+  </div>
+</div>
+
+<!-- WORKS -->
+<section id="works">
+  <div class="wrap">
+    <div class="sechead rise">
+      <div>
+        <div class="idx"><span class="l-ko">01 — 작품</span><span class="l-en">01 — Works</span></div>
+        <h2><span class="l-ko">말 대신 내놓는 세 가지</span><span class="l-en">Three things that speak for me</span>
+          <small><span class="l-ko">품질·웹·현장</span><span class="l-en">Quality · Web · Field</span></small>
+        </h2>
+      </div>
+      <p class="l-ko">무엇을 했는지보다 무엇이 달라졌는지를 먼저 보십시오. 세 항목 모두 문제, 제가 한 일, 남은 결과 순서로 적었습니다.</p>
+      <p class="l-en">Read what changed before what I did. Each one follows the same order: the problem, what I did, what is left behind.</p>
+    </div>
+
+    <div class="worklist" id="worklist">
+    <article class="work rise" data-cat="quality">
+      <div class="no">01</div>
+      <div>
+        <div class="work-meta">
+          <span class="cat" data-cat="quality"><span class="l-ko">품질 · Quality</span><span class="l-en">Quality</span></span>
+          <span class="co"><span class="l-ko">코닝정밀소재·외포장과</span><span class="l-en">Corning Precision Materials</span></span>
+        </div>
+        <h3 class="l-ko">판정을 코드로 바꾸다</h3><h3 class="l-en">Judgement, coded</h3>
+        <p class="l-ko">같은 유리 한 장이 검사하는 사람에 따라 통과가 되기도, 재검이 되기도 했습니다. 불량 유형을 코드로 나누고 Excel VBA로 집계해 반복되는 유형을 드러냈고, 검사 절차서를 써서 검사대 옆에 두었습니다.</p>
+        <p class="l-en">The same sheet of glass could pass with one inspector and go back for a second look with another. I split defect types into codes, summarised them in Excel VBA so the recurring ones became visible, and wrote the inspection procedure down beside the bench.</p>
+        <p class="l-ko">같은 불량을 두고 벌어지던 <span class="mark">논쟁이 줄었고</span>, 새로 들어온 사람이 자리를 잡는 시간도 짧아졌습니다.</p>
+        <p class="l-en">Arguments over the same defect became rarer, and new staff settled in sooner.</p>
+        <div class="res">
+          <b><span class="l-ko">결과</span><span class="l-en">Result</span></b>
+          <span class="l-ko">불량 유형 표준화·검사 절차서 비치·재검과 이견 감소</span>
+          <span class="l-en">Defect types standardised · procedure at the bench · fewer re-inspections</span>
+        </div>
+      </div>
+      <div class="side">
+        <span class="yr">2023.04 – 2024.05</span>
+        <span class="role l-ko">유리 소재 외포장 품질 검사<br>BP Works (코닝정밀소재)</span>
+        <span class="role l-en">Outgoing quality inspection<br>BP Works (Corning)</span>
+        <div class="tags">Excel VBA · QC Tools · ISO</div>
+      </div>
+    </article>
+
+    <article class="work rise" data-cat="web">
+      <div class="no">02</div>
+      <div>
+        <div class="work-meta">
+          <span class="cat" data-cat="web"><span class="l-ko">웹 · Web</span><span class="l-en">Web</span></span>
+          <span class="co"><span class="l-ko">에스에이치신한에스엘디</span><span class="l-en">SH Shinhan ESLD</span></span>
+        </div>
+        <h3 class="l-ko">회사의 얼굴 두 개를 세우다</h3><h3 class="l-en">Two websites, one hand</h3>
+        <p class="l-ko">본사와 자회사 홈페이지 두 개를 새로 만드는 일을 맡았습니다. 시공은 외주 개발사가 했지만, 업체 선정과 계약·일정 관리, 사업 자료 11종·시공사례 16건·납품실적 5개년의 콘텐츠와 디자인 방향까지 총괄했습니다(PM).</p>
+        <p class="l-en">I led the build of two corporate websites, parent and subsidiary. The vendor did the build; I selected the vendor, managed the contract and schedule, and directed the content — 11 business documents, 16 construction case studies, five years of delivery records — and the design direction, as PM.</p>
+        <p class="l-ko">태양광 사업의 구조와 인허가 절차, 수익이 어디서 나오는지를 현장에서 익힌 대로 정리했고, 시공한 발전소는 사진과 용량을 건건이 확인해 올렸습니다. 2025년 12월 본사, 2026년 1월 자회사 사이트가 문을 열었습니다.</p>
+        <p class="l-en">I wrote up how the photovoltaic business works — structure, permits, where the revenue comes from — and verified each built plant's capacity and photographs myself. The parent site launched in December 2025, the subsidiary in January 2026.</p>
+        <div class="res">
+          <b><span class="l-ko">결과</span><span class="l-en">Result</span></b>
+          <span class="l-ko">2025.12 본사 오픈 · 2026.01 자회사 오픈</span>
+          <span class="l-en">Parent site Dec 2025 · subsidiary Jan 2026</span>
+        </div>
+      </div>
+      <div class="side">
+        <span class="yr">2025.02 – 2026.02</span>
+        <span class="role l-ko">공무팀·홈페이지 구축 총괄</span>
+        <span class="role l-en">Site administration · web build lead</span>
+        <a href="https://sh-shinhan.co.kr" target="_blank" rel="noopener">sh-shinhan.co.kr <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        <a href="https://sh-ent.co.kr" target="_blank" rel="noopener">sh-ent.co.kr <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        <div class="spec">
+          <span class="l-ko">외주 개발사 선정·계약·일정 관리</span><span class="l-en">Vendor selection · contract · schedule</span>
+          <span class="l-ko">자료 11종·사례 16건·실적 5개년·디자인 총괄(PM)</span><span class="l-en">11 docs · 16 cases · 5 yrs · design — PM</span>
+        </div>
+        <div class="tags">Vendor · Contract · Content · Design</div>
+      </div>
+    </article>
+
+    <article class="work rise" data-cat="site">
+      <div class="no">03</div>
+      <div>
+        <div class="work-meta">
+          <span class="cat" data-cat="site"><span class="l-ko">현장 · Field</span><span class="l-en">Field</span></span>
+          <span class="co"><span class="l-ko">에스에이치신한에스엘디·태양광</span><span class="l-en">SH Shinhan ESLD · photovoltaic</span></span>
+        </div>
+        <h3 class="l-ko">서류와 자재를 끝까지</h3><h3 class="l-en">Paper and parts, to the end</h3>
+        <p class="l-ko">인허가 서류, 관공서 협의, 자재 입고, 협력업체 일정. 서류 한 장이 늦으면 공정 전체가 밀리는 자리라, 자재와 이슈를 표로 묶어 매일 아침 확인했습니다.</p>
+        <p class="l-en">Permits, authority meetings, material deliveries, contractor schedules. One late document holds up the whole site, so materials and open issues went into a tracker I read every morning.</p>
+        <p class="l-ko">떠나면서 사업 프로세스 11종, 시공사례 16건, 납품실적 5개년을 정리해 남겼습니다. 다음 사람이 같은 것을 처음부터 다시 배우지 않도록.</p>
+        <p class="l-en">When I left I filed 11 process documents, 16 construction case studies and five years of delivery records — so the next person would not have to learn it all again.</p>
+        <div class="res">
+          <b><span class="l-ko">결과</span><span class="l-en">Result</span></b>
+          <span class="l-ko">프로세스 자료 11종·시공사례 16건·납품실적 5개년</span>
+          <span class="l-en">11 process documents · 16 case studies · five years of records</span>
+        </div>
+      </div>
+      <div class="side">
+        <span class="yr">2025.02 – 2026.02</span>
+        <span class="role l-ko">인허가·자재·시공사 일정</span>
+        <span class="role l-en">Permits · materials · schedules</span>
+        <div class="tags">Excel · AutoCAD · Permits</div>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv">
+  <div class="wrap">
+    <div class="sechead rise">
+      <div>
+        <div class="idx"><span class="l-ko">02 — 경력</span><span class="l-en">02 — CV</span></div>
+        <h2><span class="l-ko">여덟 곳, 17년 5개월</span><span class="l-en">Eight employers, 17 years 5 months</span>
+          <small><span class="l-ko">최근 순·모두 정규직</span><span class="l-en">Most recent first · all full-time</span></small>
+        </h2>
+      </div>
+      <p class="l-ko">여덟 곳 모두 정규직입니다. 계약직과 파견은 한 번도 없었습니다. 이전 직장 급여는 공개하지 않습니다.</p>
+      <p class="l-en">All eight were full-time permanent posts — no contract work, no dispatch. Salary at previous employers is not disclosed.</p>
+    </div>
+
+    <div class="cv rise">
+      <div style="overflow-x:auto">
+        <table>
+          <thead>
+            <tr>
+              <th><span class="l-ko">기간</span><span class="l-en">Period</span></th>
+              <th><span class="l-ko">회사</span><span class="l-en">Company</span></th>
+              <th><span class="l-ko">직무</span><span class="l-en">Role</span></th>
+              <th><span class="l-ko">구분</span><span class="l-en">Type</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="p">2025.02 – 2026.02</td>
+              <td class="co"><span class="l-ko">주식회사 에스에이치신한에스엘디</span><span class="l-en">SH Shinhan ESLD</span></td>
+              <td><span class="l-ko">공무팀·태양광 발전설비</span><span class="l-en">Site administration · photovoltaic</span></td>
+              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+            <tr><td class="p">2023.04 – 2024.05</td>
+              <td class="co"><span class="l-ko">비피웍스 (코닝정밀소재)</span><span class="l-en">BP Works (Corning)</span></td>
+              <td><span class="l-ko">외포장과·품질 검사</span><span class="l-en">Packaging quality</span></td>
+              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+            <tr><td class="p">2022.11 – 2023.03</td>
+              <td class="co"><span class="l-ko">경동택배</span><span class="l-en">Kyungdong Parcel</span></td>
+              <td><span class="l-ko">물류과 · 5톤 화물 운송</span><span class="l-en">Logistics driver</span></td>
+              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+            <tr><td class="p">2022.06 – 2022.10</td>
+              <td class="co"><span class="l-ko">CETI 컴퓨터학원</span><span class="l-en">CETI Computer Academy</span></td>
+              <td><span class="l-ko">교무과 · IT 강의</span><span class="l-en">IT instructor</span></td>
+              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+            <tr><td class="p">2012.04 – 2019.03</td>
+              <td class="co"><span class="l-ko">에이치케이알 (쌍용자동차)</span><span class="l-en">HKR (SsangYong Motor)</span></td>
+              <td><span class="l-ko">생산조립 2라인</span><span class="l-en">Assembly line 2</span></td>
+              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+            <tr><td class="p">2009.04 – 2012.01</td>
+              <td class="co"><span class="l-ko">의료법인 박애의료재단</span><span class="l-en">Bakae Medical Foundation</span></td>
+              <td><span class="l-ko">전산시설관리과·팀장</span><span class="l-en">IT &amp; facility, team leader</span></td>
+              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+            <tr><td class="p">2005.11 – 2009.02</td>
+              <td class="co"><span class="l-ko">카르마 스튜디오</span><span class="l-en">KARMA STUDIO</span></td>
+              <td><span class="l-ko">촬영팀·상업사진</span><span class="l-en">Commercial photography</span></td>
+              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+            <tr><td class="p">2004.04 – 2005.10</td>
+              <td class="co"><span class="l-ko">부강통신</span><span class="l-en">Bugang Telecom</span></td>
+              <td><span class="l-ko">전산실 · KT 통신 전산</span><span class="l-en">IT operations</span></td>
+              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cvnote"><span class="l-ko">합계 17년 5개월 / 8개 사업장 — 아래 항목을 누르면 상세 업무가 열립니다.</span><span class="l-en">17 years 5 months across 8 employers — open a row for detail.</span></p>
+    </div>
+
+    <div class="minihead"><span><span class="l-ko">상세 경력 — 최근 순</span><span class="l-en">Detail — most recent first</span></span><span>01 – 08</span></div>
+
+    <details class="job" open>
+      <summary><span class="co l-ko">에스에이치신한에스엘디</span><span class="co l-en">SH Shinhan ESLD</span>
+        <span class="ro l-ko">공무팀·태양광 발전설비</span><span class="ro l-en">Site administration</span>
+        <span class="p">2025.02 – 2026.02</span><span class="sign" aria-hidden="true"></span></summary>
+      <div class="body">
+        <ul class="l-ko">
+          <li>태양광 발전설비 공무 업무 총괄 — 현장 공정 지원, 인허가·기관 협의 대응, 이슈 조율</li>
+          <li>자재 수급·입고 지원과 품질 관리, Excel 자재·이슈 트래킹 및 보고서 작성</li>
+          <li>본사·자회사 홈페이지 2건 신규 구축(PM) — 외주 개발사 선정·계약·일정 관리, 사업 자료 11종·시공사례 16건·납품실적 5개년 콘텐츠·디자인 방향 총괄 (2025.12 / 2026.01 오픈)</li>
+          <li>사업 프로세스 자료 11종·시공사례 16건·납품실적 5개년 정리</li>
+        </ul>
+        <ul class="l-en">
+          <li>Ran site administration for photovoltaic plants: process support, permit and authority coordination, issue handling.</li>
+          <li>Material supply and receipt, quality management, Excel tracking of materials and open issues, reporting.</li>
+          <li>Led two corporate website builds, parent and subsidiary (PM): vendor selection, contract and schedule, content (11 business documents, 16 construction case studies, five years of delivery records) and design direction (launched Dec 2025 / Jan 2026).</li>
+          <li>Produced 11 process documents, 16 construction case studies and five years of delivery records.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary><span class="co l-ko">비피웍스 (코닝정밀소재)</span><span class="co l-en">BP Works (Corning)</span>
+        <span class="ro l-ko">외포장과·품질 검사</span><span class="ro l-en">Packaging quality</span>
+        <span class="p">2023.04 – 2024.05</span><span class="sign" aria-hidden="true"></span></summary>
+      <div class="body">
+        <ul class="l-ko">
+          <li>유리 소재 품질 검사 프로세스 개선, 생산 품질 기준 표준화로 작업 편차 축소</li>
+          <li>불량 유형별 원인 분석 체계 수립, 데이터 기반 점검으로 검수 효율 개선</li>
+          <li>불량 유형 코드화 및 Excel VBA 집계 도구 제작, 검사 절차서 작성·비치</li>
+        </ul>
+        <ul class="l-en">
+          <li>Improved inspection processes and standardised quality criteria, cutting variation between shifts.</li>
+          <li>Built a defect-type root-cause system and used data to improve inspection efficiency.</li>
+          <li>Coded defect types, built the Excel VBA summary, and wrote the inspection procedure at the bench.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary><span class="co l-ko">경동택배</span><span class="co l-en">Kyungdong Parcel</span>
+        <span class="ro l-ko">물류과 · 5톤 화물 운송</span><span class="ro l-en">Logistics driver</span>
+        <span class="p">2022.11 – 2023.03</span><span class="sign" aria-hidden="true"></span></summary>
+      <div class="body">
+        <ul class="l-ko">
+          <li>주요 운송 루트 데이터 분석, 경로 재설정으로 배송 시간·연료비 절감</li>
+          <li>물류창고 재고 관리 체계 개선, 입출고 오류·분실 감소</li>
+        </ul>
+        <ul class="l-en">
+          <li>Analysed the main routes and re-planned them, cutting delivery time and fuel cost.</li>
+          <li>Improved warehouse stock control, reducing receipt and despatch errors and losses.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary><span class="co">CETI <span class="l-ko">컴퓨터학원</span><span class="l-en">Computer Academy</span></span>
+        <span class="ro l-ko">교무과 · IT 강의</span><span class="ro l-en">Instructor</span>
+        <span class="p">2022.06 – 2022.10</span><span class="sign" aria-hidden="true"></span></summary>
+      <div class="body">
+        <ul class="l-ko">
+          <li>IT 기초 프로그래밍 강의, 프로젝트 지도 — HTML, CSS, MySQL, GitHub</li>
+          <li>비전공자 수준에 맞춰 커리큘럼 조정, 과제 피드백을 글로 남김</li>
+        </ul>
+        <ul class="l-en">
+          <li>Taught practical HTML, CSS, MySQL and GitHub to students with no IT background.</li>
+          <li>Reworked the curriculum to their level and kept assignment feedback in writing.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary><span class="co"><span class="l-ko">에이치케이알 (쌍용자동차)</span><span class="l-en">HKR (SsangYong Motor)</span></span>
+        <span class="ro l-ko">생산조립 2라인</span><span class="ro l-en">Assembly line 2</span>
+        <span class="p">2012.04 – 2019.03</span><span class="sign" aria-hidden="true"></span></summary>
+      <div class="body">
+        <ul class="l-ko">
+          <li>생산조립 라인 병목 구간 정리, 공정 설계 개선 참여로 작업 시간 단축</li>
+          <li>구매·품질 부서 협업으로 부품 품질 관리 체계 구축, 불량 부품 발생 감소</li>
+          <li>불량마다 사진·수량·발생 시각을 기록해 협력사에 전달하고 대책 확인까지 추적</li>
+        </ul>
+        <ul class="l-en">
+          <li>Cleared bottlenecks on the assembly line and contributed to process changes that cut cycle time.</li>
+          <li>Built parts-quality control with purchasing and quality staff, reducing defective parts.</li>
+          <li>Recorded photograph, quantity and time for each defect, sent it to the supplier and followed the countermeasure.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary><span class="co l-ko">의료법인 박애의료재단</span><span class="co l-en">Bakae Medical Foundation</span>
+        <span class="ro l-ko">전산시설관리과·팀장</span><span class="ro l-en">IT &amp; facility, team leader</span>
+        <span class="p">2009.04 – 2012.01</span><span class="sign" aria-hidden="true"></span></summary>
+      <div class="body">
+        <ul class="l-ko">
+          <li>의료 전산망 구축 프로젝트 주도, 병원 관리 시스템(HIS) 도입으로 사용자 편의 개선</li>
+          <li>직원 IT 요청 처리 절차 간소화, 장애 대응 총괄</li>
+          <li>시설 유지보수와 팀원·교대 근무 배정 관리</li>
+        </ul>
+        <ul class="l-en">
+          <li>Ran the hospital network, servers, HIS operations and facility maintenance, managing staff and shifts.</li>
+          <li>Simplified IT support handling, shortening response time to failures.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary><span class="co l-ko">카르마 스튜디오</span><span class="co l-en">KARMA STUDIO</span>
+        <span class="ro l-ko">촬영팀·상업사진</span><span class="ro l-en">Commercial photography</span>
+        <span class="p">2005.11 – 2009.02</span><span class="sign" aria-hidden="true"></span></summary>
+      <div class="body">
+        <ul class="l-ko">
+          <li>대형 상업 사진 촬영 프로젝트에서 요구에 맞춘 결과물 제작·납기 관리</li>
+          <li>색상 보정과 인화 품질 관리로 재작업 감소</li>
+        </ul>
+        <ul class="l-en">
+          <li>Produced commercial photography to client briefs and managed deadlines.</li>
+          <li>Kept colour and brightness consistent across deliverables, reducing rework.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary><span class="co l-ko">부강통신</span><span class="co l-en">Bugang Telecom</span>
+        <span class="ro l-ko">전산실 · KT 통신 전산</span><span class="ro l-en">IT operations</span>
+        <span class="p">2004.04 – 2005.10</span><span class="sign" aria-hidden="true"></span></summary>
+      <div class="body">
+        <ul class="l-ko">
+          <li>KT 통신 전산망 관리, 장애 대응, 전산 설비 유지보수로 회선 운영 유지</li>
+          <li>고객 요청 처리 절차 정리로 응대 시간 단축·불만 접수 감소</li>
+        </ul>
+        <ul class="l-en">
+          <li>Maintained KT telecom systems and equipment, handling faults and customer support.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sechead rise">
+      <div>
+        <div class="idx"><span class="l-ko">03 — 역량</span><span class="l-en">03 — Skills</span></div>
+        <h2><span class="l-ko">쓸 수 있는 것</span><span class="l-en">What I work with</span>
+          <small><span class="l-ko">분야와 도구, 써 본 곳</span><span class="l-en">Fields, tools, and where they were used</span></small>
+        </h2>
+      </div>
+      <p class="l-ko">할 수 있는 일과, 그것을 실제로 써 본 자리를 함께 적었습니다.</p>
+      <p class="l-en">What I can do, written next to where I actually did it.</p>
+    </div>
+
+    <div class="skillgrid rise">
+      <div class="skill">
+        <h3><span>01</span><span class="l-ko">품질 관리</span><span class="l-en">Quality control</span></h3>
+        <p class="l-ko">검사 기준 문서화, 불량 유형 분류·코드화, 비부합 판정, 협력사 대책 추적.</p>
+        <p class="l-en">Inspection standards in writing, defect classification and coding, non-conformity calls, supplier follow-up.</p>
+        <div class="where"><span class="l-ko">유리 외포장·자동차 부품·태양광</span><span class="l-en">Glass · vehicle parts · photovoltaic</span></div>
+      </div>
+      <div class="skill">
+        <h3><span>02</span>Excel · VBA</h3>
+        <p class="l-ko">함수·피벗·VBA로 불량과 자재를 집계하고, 월간 품질 지표와 보고서를 만들었습니다.</p>
+        <p class="l-en">Functions, pivot tables and VBA to track defects and materials, and to build monthly indicators and reports.</p>
+        <div class="where"><span class="l-ko">전 직무 · 7개 사업장</span><span class="l-en">All roles · 7 of 8 employers</span></div>
+      </div>
+      <div class="skill">
+        <h3><span>03</span><span class="l-ko">현장·공무</span><span class="l-en">Site administration</span></h3>
+        <p class="l-ko">인허가 서류, 기관 협의, 자재 수급·입고, 시공사 일정 조율, 시공사례 정리.</p>
+        <p class="l-en">Permit documents, authority coordination, material supply and receipt, contractor scheduling, case studies.</p>
+        <div class="where"><span class="l-ko">태양광 발전설비·쌍용차 라인</span><span class="l-en">Photovoltaic · vehicle assembly</span></div>
+      </div>
+      <div class="skill">
+        <h3><span>04</span><span class="l-ko">IT · 서버</span><span class="l-en">IT &amp; servers</span></h3>
+        <p class="l-ko">서버·네트워크 운영, MySQL, 병원 HIS 운영과 장애 대응.</p>
+        <p class="l-en">Server and network operation, MySQL, hospital HIS operations and fault response.</p>
+        <div class="where"><span class="l-ko">박애의료재단·부강통신·강의</span><span class="l-en">Bakae · Bugang · teaching</span></div>
+      </div>
+      <div class="skill">
+        <h3><span>05</span>AutoCAD · SketchUp</h3>
+        <p class="l-ko">도면 해독과 설비 배치, 실내건축설계 과정 수료 후 현장 도면 확인에 사용.</p>
+        <p class="l-en">Drawing interpretation and equipment layout, used on site after the interior design CAD course.</p>
+        <div class="where"><span class="l-ko">태양광 현장 · 2024 과정</span><span class="l-en">PV site · 2024 course</span></div>
+      </div>
+      <div class="skill">
+        <h3><span>06</span><span class="l-ko">자격·운전</span><span class="l-en">Licences</span></h3>
+        <p class="l-ko">1종 대형 · 1종 보통, 3톤 미만 지게차. 천안·아산 출퇴근 가능.</p>
+        <p class="l-en">Class 1 Large and Class 1 Ordinary licences, forklift under 3 tons; commutable to Cheonan and Asan.</p>
+        <div class="where"><span class="l-ko">현장·물류 업무</span><span class="l-en">Site and logistics work</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="cred">
+  <div class="wrap">
+    <div class="sechead rise">
+      <div>
+        <div class="idx"><span class="l-ko">04 — 자격</span><span class="l-en">04 — Credentials</span></div>
+        <h2><span class="l-ko">자격·교육·학력</span><span class="l-en">Credentials</span>
+          <small><span class="l-ko">9건 · 3과정 · 전문학사</span><span class="l-en">9 licences · 3 courses · associate degree</span></small>
+        </h2>
+      </div>
+      <p class="l-ko">필요해서 딴 자격만 적었습니다. 일하는 데 필요한 공부라면 지금도 미루지 않습니다.</p>
+      <p class="l-en">Only the certificates the work required — and I still don't put off study the job calls for.</p>
+    </div>
+
+    <div class="cred rise">
+      <div>
+        <h3><span class="l-ko">자격·면허</span><span class="l-en">Licences</span></h3>
+        <ul class="l-ko">
+          <li><b>손해보험설계사 (등록번호 A24092300200)</b><em>2024.09</em></li>
+          <li><b>제3보험설계사 (등록번호 B24092300202)</b><em>2024.09</em></li>
+          <li><b>건설기계조종사면허 (지게차 3톤 미만)</b><em>2024.03</em></li>
+          <li><b>자동차운전면허 1종 대형</b><em>2013.05</em></li>
+          <li><b>자동차운전면허 1종 보통</b><em>2010.04</em></li>
+          <li><b>커피바리스타</b><em>2012.01</em></li>
+          <li><b>바리스타 2급</b><em>2012.01</em></li>
+          <li><b>합기도 공인 2단</b><em>2005.05</em></li>
+          <li><b>태권도 공인 3단</b><em>1999.03</em></li>
+        </ul>
+        <p class="lic-note l-ko">메리츠화재해상보험(주) 파트너스본부 파트너스충청센터 · 2024.09.23 위촉, 2026.11.20 기준 위촉 유지</p>
+        <ul class="l-en">
+          <li><b>Licensed insurance planner — non-life registration A24092300200</b><em>2024.09</em></li>
+          <li><b>Licensed insurance planner — third-sector registration B24092300202</b><em>2024.09</em></li>
+          <li><b>Forklift licence (under 3 t)</b><em>2024.03</em></li>
+          <li><b>Driver's licence, Class 1 Large</b><em>2013.05</em></li>
+          <li><b>Driver's licence, Class 1 Ordinary</b><em>2010.04</em></li>
+          <li><b>Coffee Barista</b><em>2012.01</em></li>
+          <li><b>Barista Grade 2</b><em>2012.01</em></li>
+          <li><b>Hapkido 2nd Dan</b><em>2005.05</em></li>
+          <li><b>Taekwondo 3rd Dan</b><em>1999.03</em></li>
+        </ul>
+        <p class="lic-note l-en">Meritz Fire &amp; Marine Insurance (Partners HQ, Partners Chungcheong Centre) · appointed 23 Sep 2024, current as of 20 Nov 2026</p>
+      </div>
+      <div>
+        <h3><span class="l-ko">교육·훈련</span><span class="l-en">Training</span></h3>
+        <ul class="l-ko">
+          <li><b>실내건축설계 CAD·스케치업</b><em>2024</em></li>
+          <li><b>AI·빅데이터 자바 안드로이드 앱 개발</b><em>2021–22</em></li>
+          <li><b>스마트웹&amp;앱 개발자 (풀스택)</b><em>2021</em></li>
+        </ul>
+        <ul class="l-en">
+          <li><b>AutoCAD &amp; SketchUp, interior design</b><em>2024</em></li>
+          <li><b>Java Android with AI and big data</b><em>2021–22</em></li>
+          <li><b>Full-stack web &amp; app developer</b><em>2021</em></li>
+        </ul>
+        <h3 style="margin-top:26px"><span class="l-ko">어학</span><span class="l-en">Language</span></h3>
+        <ul class="l-ko"><li><b>영어 — 기초·일상 회화와 기본 업무 소통(중하)</b><em>2019–21</em></li></ul>
+        <ul class="l-en"><li><b>English — basic to intermediate: everyday conversation, basic work</b><em>2019–21</em></li></ul>
+      </div>
+      <div>
+        <h3><span class="l-ko">학력</span><span class="l-en">Education</span></h3>
+        <ul class="l-ko">
+          <li><b>신성대학교 세무회계학과</b><em>2001–06</em></li>
+          <li><b>효명고등학교 인문계</b><em>1997–00</em></li>
+        </ul>
+        <ul class="l-en">
+          <li><b>Shin Sung University, Tax Accounting</b><em>2001–06</em></li>
+          <li><b>Hyomyeong High School</b><em>1997–00</em></li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="l-ko">병역·근무 조건</span><span class="l-en">Service · availability</span></h3>
+        <ul class="l-ko">
+          <li><b>육군(합참) 정보(심리전)과·병장 만기</b><em>2002–04</em></li>
+          <li><b>교대·주 6일·상주 근무 가능</b><em>가능</em></li>
+        </ul>
+        <ul class="l-en">
+          <li><b>R.O.K. Army (JCS), Sergeant, honourable</b><em>2002–04</em></li>
+          <li><b>Shift, six-day weeks, residential</b><em>Yes</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section id="letter">
+  <div class="wrap">
+    <div class="sechead rise">
+      <div>
+        <div class="idx"><span class="l-ko">05 — 자기소개</span><span class="l-en">05 — Letter</span></div>
+        <h2><span class="l-ko">자기소개서 네 문단</span><span class="l-en">Four paragraphs</span>
+          <small><span class="l-ko">자기소개서 요약</span><span class="l-en">From the cover letter</span></small>
+        </h2>
+      </div>
+      <p class="l-ko">자기소개서 원문을 화면에 맞게 줄였습니다. 전문은 PDF에 있습니다.</p>
+      <p class="l-en">Shortened for the screen; the full letter is in the PDF.</p>
+    </div>
+
+    <div class="letter">
+      <div class="litem rise">
+        <div class="n">01</div>
+        <div>
+          <h3 class="l-ko">여덟 번 모두 정규직이었던 이유</h3><h3 class="l-en">Why all eight were full-time</h3>
+          <p class="lead l-ko">맡은 일은 제 손에서 끝내고, 나중에 누가 물어도 답할 수 있게 남깁니다.</p>
+          <p class="lead l-en">The work ends in my hands, and I leave a record so anyone can ask me later.</p>
+          <p class="l-ko">컴퓨터 전산으로 사회에 첫발을 디뎠고, 사진 스튜디오·병원 전산·자동차 생산라인·컴퓨터 학원·택배·유리 검사·태양광 공무로 자리를 옮겼습니다. 어디서든 가장 먼저 도착해 자리를 잡았고, 출퇴근 시간과 맡은 시간을 어긴 적이 없습니다.</p>
+          <p class="l-ko">수첩에 적고, 현장에서 받은 지시나 확인한 내용은 그날 안으로 엑셀이나 메모로 정리합니다. 번거로워 보일 수 있지만, 그렇게 해 두면 비슷한 일이 다시 생겼을 때 훨씬 빨리 움직일 수 있습니다.</p>
+          <p class="l-en">My name is Eunsung Kang. I have spent 17 years and 5 months in full-time work, most of it on the floor of a plant, a warehouse or a site — IT first, then 6 years 11 months on the SsangYong assembly line, glass packaging inspection, freight, teaching IT to adults, and most recently permits, materials and schedules for photovoltaic plants.</p>
+          <p class="l-en">The products and job titles changed every time. What did not change was the actual work: go and see the problem, agree a standard with the people around me, write it down so it survives me, and use the numbers to find where the problem started.</p>
+        </div>
+      </div>
+
+      <div class="litem rise">
+        <div class="n">02</div>
+        <div>
+          <h3 class="l-ko">현장을 코드로 정리하다</h3><h3 class="l-en">Coding the factory floor</h3>
+          <p class="lead l-ko">판정이 흔들리면 아무리 열심히 검사해도 소용이 없습니다.</p>
+          <p class="lead l-en">If judgement drifts, no amount of hard inspection helps.</p>
+          <p class="l-ko">6년 11개월 동안 자동차 생산라인에 있으면서 작업 순서를 바꾸고 구매·품질 담당자와 부품 이야기를 주고받으며 불량 부품이 라인에 들어오는 일을 줄였습니다. 코닝정밀소재에서는 불량 유형을 코드로 나눠 엑셀로 정리하고 VBA로 집계 도구를 만들어, 어떤 유형이 어느 공정에서 반복되는지 드러나게 했습니다.</p>
+          <p class="l-ko">기준을 글로 남겨야 사람이 바뀌어도 일이 유지된다는 것을 그때 배웠습니다. 마지막 직장에서는 인허가 서류와 기관 협의, 자재 수급, 시공사 일정을 맡았고 회사 홈페이지 두 개를 만드는 일도 총괄했습니다. 하는 일은 달라도 방법은 같았습니다 — 무엇이 사실이어야 하는지 정하고, 문서로 남기고, 끝날 때까지 따라가는 일.</p>
+          <p class="l-en">At Corning, inspectors judged the same product slightly differently, so the same item would pass with one person and be sent for a second look by another. I grouped defect types, coded them and summarised them in Excel so the frequent ones became visible, then wrote the procedure down and put it beside the bench.</p>
+          <p class="l-en">At SsangYong I checked incoming parts with purchasing and quality staff, recorded photograph, quantity and time for each defect, and followed the supplier's countermeasure until it was confirmed. At my last employer the work was permits, authorities, materials, contractor schedules and two websites — different work, same method.</p>
+        </div>
+      </div>
+
+      <div class="litem rise">
+        <div class="n">03</div>
+        <div>
+          <h3 class="l-ko">말은 적어도, 끝은 봅니다</h3><h3 class="l-en">Few words, finished work</h3>
+          <p class="lead l-ko">장점은 성실함과 꼼꼼함, 단점은 앞에 나서는 것을 좋아하지 않는다는 점입니다.</p>
+          <p class="lead l-en">My strength is diligence; the gap I know about is depth in a single specialty.</p>
+          <p class="l-ko">회의에서 할 말이 있어도 타이밍을 놓친 적이 한두 번이 아닙니다. 지금은 회의 전에 할 말을 세 줄로 적어 가고, 끝나기 전에 한 번은 꺼내려 합니다. 성격이 급한 편이 아니라 마감이 몰리면 느려 보일 때가 있지만, 순서를 정해 하나씩 끝내는 편이 결과적으로 빠르다는 것을 여러 번 겪었습니다.</p>
+          <p class="l-ko">생산·품질·물류·IT·현장을 두루 거쳤기 때문에 주변 부서가 실제로 어떻게 돌아가는지는 압니다. 대신 한 분야의 기술적 깊이는 새로 배워야 합니다. 절차서와 시방서를 꼼꼼히 읽고, 이해될 때까지 묻고, 들은 것은 적어 두어 같은 것을 두 번 묻지 않습니다.</p>
+          <p class="l-en">I don't like standing at the front, and I have missed the moment in meetings more than once. Now I write what I want to say in three lines before the meeting and make sure I say it once before it ends. I am not quick-tempered; when deadlines crowd, I may look slow, but I have seen often enough that ordering the work and finishing it one by one is faster in the end.</p>
+          <p class="l-en">Having worked across production, quality, logistics, IT and site administration, I understand how the departments around me actually work. What it costs me is technical depth in one field: I read procedures and specifications carefully, ask until I understand, and write down what I am told.</p>
+        </div>
+      </div>
+
+      <div class="litem rise">
+        <div class="n">04</div>
+        <div>
+          <h3 class="l-ko">모르면 묻고, 적어 둡니다</h3><h3 class="l-en">Ask once, write it down</h3>
+          <p class="lead l-ko">첫 달은 기준과 동선을 익히고, 둘째 달부터 맡은 일을 눈에 보이게 만들겠습니다.</p>
+          <p class="lead l-en">The first month goes to learning how the site runs; from the second, I make my part visible.</p>
+          <p class="l-ko">모르는 것은 부끄러워하지 않고 묻되, 같은 것을 두 번 묻지 않겠습니다. 맡은 일을 눈에 보이게 만들어 — 체크리스트, 트래킹 시트, 짧은 절차서 — 누구에게나 물어보지 않아도 일의 상태가 보이게 하겠습니다. 서류와 현장 사이에서 일이 끊기지 않게 만드는 일, 그 기본을 지키겠습니다.</p>
+          <p class="l-ko">지게차 면허를 따고 CAD와 스케치업 과정을 들은 것도, 그 전에 웹 개발 과정을 수료한 것도 필요한 일이 있어서였습니다. 일하는 데 필요한 공부라면 지금도 미루지 않습니다. 이번 자리에서도 그 기본을 지키며 오래 다니고 싶습니다.</p>
+          <p class="l-en">I will ask without embarrassment but never the same thing twice. I would take the part I am given and make it visible — a checklist, a tracking sheet, a short written procedure — so the state of the work can be seen without asking me. I do not need a title to start; I want a place where the work has a standard and someone has to keep it.</p>
+          <p class="l-en">The forklift licence and the CAD course, like the web development course before them, were taken because the work needed them. With 17 years and 5 months of full-time experience, I intend this next position to be a long-term commitment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download">
+  <div class="wrap">
+    <div class="sechead rise">
+      <div>
+        <div class="idx"><span class="l-ko">06 — 파일</span><span class="l-en">06 — Files</span></div>
+        <h2><span class="l-ko">한 권으로 묶은 이력서</span><span class="l-en">One book</span>
+          <small><span class="l-ko">A4 · 국문 4쪽(1·2부 3쪽 + 3부 1쪽) / 영문 4쪽</span><span class="l-en">A4 · 4 pages each — parts 1–2 in 3 pages, part 3 in 1</span></small>
+        </h2>
+      </div>
+      <p class="l-ko">1부 이력서, 2부 자기소개서, 3부 홍보 시트를 한 파일로 이어 붙였습니다. 웹 공개용이라 상세 주소·생년월일·친필서명은 넣지 않았습니다.</p>
+      <p class="l-en">Part 1 résumé, part 2 cover letter and part 3 portfolio sheet in one file. Public web version: no home address, date of birth or handwritten signature.</p>
+    </div>
+
+    <div class="dl rise">
+      <div class="dlrow">
+        <div class="flag">KO</div>
+        <div>
+          <h3><span class="l-ko">1부·2부·3부 통합본</span><span class="l-en">Parts 1–3, one file</span></h3>
+          <p class="l-ko">인적사항(아산시까지), 병역, 학력, 자격, 경력기술, 자기소개서, 3부 홍보 시트.</p>
+          <p class="l-en">Personal details (city level), service, education, licences, experience, cover letter, part 3 sheet.</p>
+        </div>
+        <a href="files/Eunsung_Kang_Resume_2026_KO.pdf" download>
+          <span class="l-ko">내려받기</span><span class="l-en">Download</span>
+          <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4M12 15l-4-4"/><path d="M5 19h14"/></svg>
+        </a>
+      </div>
+      <div class="dlrow">
+        <div class="flag">EN</div>
+        <div>
+          <h3><span class="l-ko">영문 Resume·Cover Letter·Part 3</span><span class="l-en">English résumé &amp; cover letter</span></h3>
+          <p class="l-ko">Personal details, employment summary, professional experience, cover letter, part 3 sheet.</p>
+          <p class="l-en">Personal details, employment summary, professional experience, cover letter, part 3 sheet.</p>
+        </div>
+        <a href="files/Eunsung_Kang_Resume_2026_EN.pdf" download>
+          <span class="l-ko">내려받기</span><span class="l-en">Download</span>
+          <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4M12 15l-4-4"/><path d="M5 19h14"/></svg>
+        </a>
+      </div>
+      <div class="dlrow">
+        <div class="flag">III</div>
+        <div>
+          <h3><span class="l-ko">3부 · 한 장으로 보는 현장 포트폴리오</span><span class="l-en">Part 3 · the site portfolio in one page</span></h3>
+          <p class="l-ko">A4 1쪽. 고용24·입사지원서 첨부용으로 따로 내려받습니다. 국문과 영문 두 판.</p>
+          <p class="l-en">One A4 page, separate from the book. Korean and English versions.</p>
+        </div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+          <a href="files/Eunsung_Kang_Promo_Sheet_2026.pdf" download>
+            <span class="l-ko">국문</span><span class="l-en">KO</span>
+            <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4M12 15l-4-4"/><path d="M5 19h14"/></svg>
+          </a>
+          <a href="files/Eunsung_Kang_Promo_Sheet_2026_EN.pdf" download>
+            <span class="l-ko">영문</span><span class="l-en">EN</span>
+            <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4M12 15l-4-4"/><path d="M5 19h14"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="dlrow">
+        <div class="flag">PDF</div>
+        <div>
+          <h3><span class="l-ko">지금 보는 언어로 이력서 PDF</span><span class="l-en">The résumé PDF in your language</span></h3>
+          <p class="l-ko">A4 4쪽 완성본을 바로 내려받습니다. 브라우저 인쇄(인쇄 미리보기)로도 A4 여백에 맞춰 나옵니다.</p>
+          <p class="l-en">The finished four A4 pages, straight to your downloads. Printing the page itself also fits A4.</p>
+        </div>
+        <a id="printPdf" href="files/Eunsung_Kang_Resume_2026_KO.pdf" download>
+          <span class="l-ko">PDF 내려받기</span><span class="l-en">Download PDF</span>
+          <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4M12 15l-4-4"/><path d="M5 19h14"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow"><span class="l-ko">07 — 연락</span><span class="l-en">07 — Contact</span></div>
+    <h2 class="l-ko">기준이 필요한 자리라면,<br>연락 주십시오.</h2>
+    <h2 class="l-en">If the job needs a standard,<br>let’s talk.</h2>
+    <div class="ways">
+      <a href="tel:+821041480120"><em><span class="l-ko">전화</span><span class="l-en">Mobile</span></em>010-4148-0120</a>
+      <a href="mailto:devgru.kang@gmail.com"><em>E-mail</em>devgru.kang@gmail.com</a>
+    </div>
+    <button type="button" class="textlink copybtn" id="copyLink">
+      <svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M15 5H5v10"/></svg>
+      <span class="copy-idle"><span class="l-ko">이 페이지 링크 복사</span><span class="l-en">Copy this page’s link</span></span>
+      <span class="copy-done"><span class="l-ko">링크를 복사했습니다</span><span class="l-en">Link copied</span></span>
+    </button>
+    <p class="lede l-ko">품질·공무·현장 운영 자리를 찾고 있습니다. 교대 근무, 주 6일, 상주 근무 모두 가능하고 입사 시기는 조정할 수 있습니다.</p>
+    <p class="lede l-en">I am looking for quality, site administration and field operations roles. Shift work, six-day weeks and residential postings are all fine, and I can start at short notice.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 <span class="l-ko">강은성</span><span class="l-en">Eunsung Kang</span> · <span class="l-ko">충남 아산시</span><span class="l-en">Asan-si, Korea</span></div>
+    <div><span class="l-ko">최종 갱신 2026.11.22</span><span class="l-en">Updated 22 Nov 2026</span></div>
+    <nav><a href="#top"><span class="l-ko">맨 위</span><span class="l-en">Top</span></a></nav>
+  </div>
+</footer>
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Eunsung Kang",
+  "alternateName":"강은성",
+  "url":"https://devgrukang.github.io/",
+  "image":"https://devgrukang.github.io/assets/photo.jpg",
+  "jobTitle":"Quality control · Site administration",
+  "email":"mailto:devgru.kang@gmail.com",
+  "telephone":"+82-10-4148-0120",
+  "address":{"@type":"PostalAddress","addressRegion":"Chungcheongnam-do","addressLocality":"Asan-si","addressCountry":"KR"},
+  "knowsLanguage":["ko","en"]
+}
+</script>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* language */
+  var buttons = document.querySelectorAll('[data-setlang]');
+  var stored = null;
+  try { stored = localStorage.getItem('resume-lang'); } catch(e){}
+  var initial = stored || ((navigator.language||'ko').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en');
+  function apply(lang){
+    root.setAttribute('lang', lang);
+    for (var i=0;i<buttons.length;i++){ buttons[i].setAttribute('aria-pressed', String(buttons[i].dataset.setlang === lang)); }
+    document.title = (lang === 'en')
+      ? '17 Years Organising the Site — Eunsung Kang'
+      : '현장을 정리해 온 17년, 강은성';
+    /* 파일 칸의 PDF 내려받기: 지금 보는 언어의 완성본을 준다 */
+    var pdfLink = document.getElementById('printPdf');
+    if (pdfLink) pdfLink.setAttribute('href', lang === 'en'
+      ? 'files/Eunsung_Kang_Resume_2026_EN.pdf'
+      : 'files/Eunsung_Kang_Resume_2026_KO.pdf');
+    try { localStorage.setItem('resume-lang', lang); } catch(e){}
+  }
+  for (var i=0;i<buttons.length;i++){
+    buttons[i].addEventListener('click', function(){ apply(this.dataset.setlang); });
+  }
+  apply(initial);
+
+  /* header + progress */
+  var hdr = document.getElementById('hdr');
+  var prog = document.getElementById('progress');
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    hdr.classList.toggle('solid', y > 24);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* reveal */
+  var rises = document.querySelectorAll('.rise');
+  if ('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.05});
+    for (var j=0;j<rises.length;j++){ io.observe(rises[j]); }
+  } else {
+    for (var k=0;k<rises.length;k++){ rises[k].classList.add('in'); }
+  }
+
+  /* nav active */
+  var navlinks = document.querySelectorAll('.hdr nav a');
+  var secs = [];
+  for (var n=0;n<navlinks.length;n++){
+    var el = document.querySelector(navlinks[n].getAttribute('href'));
+    if (el) secs.push({a:navlinks[n], s:el});
+  }
+  if ('IntersectionObserver' in window && secs.length){
+    var spy = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        for (var m=0;m<navlinks.length;m++){ navlinks[m].classList.remove('active'); }
+        for (var q=0;q<secs.length;q++){ if (secs[q].s === e.target) secs[q].a.classList.add('active'); }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    for (var p=0;p<secs.length;p++){ spy.observe(secs[p].s); }
+  }
+
+  /* reel: 자동 좌측 흐름 + 마우스 드래그·터치 스와이프 + 무한 루프 */
+  var reel = document.getElementById('reel');
+  var reelTrack = document.getElementById('reelTrack');
+  var toggle = document.getElementById('reelToggle');
+  if (reel && reelTrack){
+    var userPaused = false;
+    var dragging = false;
+    var hovering = false;
+    var holdUntil = 0;
+    var startX = 0, startScroll = 0;
+    var SPEED = 0.55;
+    var frames = [].slice.call(reelTrack.children);
+    var baseCount = Math.floor(frames.length / 2) || frames.length;
+    var baseFrames = frames.slice(0, baseCount);
+    var setW = 0;
+    var measure = function(){
+      var w = 0;
+      baseFrames.forEach(function(f){ w += f.getBoundingClientRect().width; });
+      setW = w;
+    };
+    var cloneSet = function(){
+      baseFrames.forEach(function(f){
+        var c = f.cloneNode(true);
+        c.setAttribute('aria-hidden', 'true');
+        c.setAttribute('tabindex', '-1');
+        reelTrack.appendChild(c);
+      });
+    };
+    var ensureCopies = function(){
+      measure();
+      if (!setW) return;
+      var guard = 0;
+      while (reelTrack.scrollWidth - reel.clientWidth <= setW * 2 && guard < 6){
+        cloneSet(); guard++;
+      }
+    };
+    var wrap = function(){
+      if (!setW) return;
+      while (reel.scrollLeft >= setW * 2) reel.scrollLeft -= setW;
+      while (reel.scrollLeft < 0) reel.scrollLeft += setW;
+    };
+    var recentre = function(){
+      ensureCopies();
+      if (setW) reel.scrollLeft = setW;
+    };
+    recentre();
+    if (!reduce){
+      var step = function(){
+        if (!userPaused && !dragging && !hovering && Date.now() >= holdUntil){
+          reel.scrollLeft += SPEED;
+          wrap();
+        }
+        window.requestAnimationFrame(step);
+      };
+      window.requestAnimationFrame(step);
+    }
+    if (toggle){
+      toggle.addEventListener('click', function(){
+        userPaused = !userPaused;
+        toggle.setAttribute('aria-pressed', String(userPaused));
+        toggle.innerHTML = userPaused ? '<span class="l-ko">재생</span><span class="l-en">Play</span>'
+                                      : '<span class="l-ko">일시정지</span><span class="l-en">Pause</span>';
+        apply(root.getAttribute('lang'));
+      });
+    }
+    /* 마우스·펜 드래그 */
+    reel.addEventListener('pointerdown', function(e){
+      if (e.pointerType === 'touch' || (e.pointerType === 'mouse' && e.button !== 0)) return;
+      dragging = true;
+      startX = e.clientX;
+      startScroll = reel.scrollLeft;
+      reel.classList.add('dragging');
+      if (reel.setPointerCapture){ try { reel.setPointerCapture(e.pointerId); } catch(err){} }
+      e.preventDefault();
+    });
+    reel.addEventListener('pointermove', function(e){
+      if (!dragging) return;
+      reel.scrollLeft = startScroll - (e.clientX - startX);
+      wrap();
+      e.preventDefault();
+    });
+    var endDrag = function(){
+      if (!dragging) return;
+      dragging = false;
+      reel.classList.remove('dragging');
+      wrap();
+      holdUntil = Date.now() + 900;
+    };
+    reel.addEventListener('pointerup', endDrag);
+    reel.addEventListener('pointercancel', endDrag);
+    /* 터치 스와이프: 네이티브 스크롤을 쓰고, 그동안 자동 흐름만 멈춘다 */
+    reel.addEventListener('touchstart', function(){ holdUntil = Date.now() + 60000; }, {passive:true});
+    reel.addEventListener('touchend', function(){ wrap(); holdUntil = Date.now() + 900; }, {passive:true});
+    reel.addEventListener('touchcancel', function(){ wrap(); holdUntil = Date.now() + 900; }, {passive:true});
+    /* 마우스를 올려두면 잠시 멈춘다 (기존 동작 유지) */
+    reel.addEventListener('mouseenter', function(){ hovering = true; });
+    reel.addEventListener('mouseleave', function(){ hovering = false; });
+    var resizeTimer;
+    window.addEventListener('resize', function(){
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(recentre, 200);
+    });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(recentre);
+  }
+
+  /* role view */
+  var roleButtons = document.querySelectorAll('.rolebar button');
+  var roleline = document.getElementById('roleline');
+  var worklist = document.getElementById('worklist');
+  var ORDER = {all:['quality','web','site'], quality:['quality','site','web'], site:['site','web','quality'], ops:['web','site','quality']};
+  var LEAD = {all:null, quality:'quality', site:'site', ops:'web'};
+  function applyRole(role, updateUrl){
+    if (!ORDER[role]) role = 'all';
+    var arts = worklist ? worklist.querySelectorAll('.work') : [];
+    var map = {};
+    for (var i=0;i<arts.length;i++){ map[arts[i].getAttribute('data-cat')] = arts[i]; }
+    var order = ORDER[role];
+    for (var j=0;j<order.length;j++){ if (map[order[j]]) worklist.appendChild(map[order[j]]); }
+    for (var k=0;k<arts.length;k++){
+      var cat = arts[k].getAttribute('data-cat');
+      var lead = role !== 'all' && cat === LEAD[role];
+      arts[k].setAttribute('data-dim', (role !== 'all' && !lead) ? '1' : '0');
+      if (lead) arts[k].setAttribute('data-lead','1'); else arts[k].removeAttribute('data-lead');
+    }
+    for (var b=0;b<roleButtons.length;b++){ roleButtons[b].setAttribute('aria-pressed', String(roleButtons[b].dataset.role === role)); }
+    if (roleline){
+      roleline.classList.toggle('on', role !== 'all');
+      var ps = roleline.querySelectorAll('p');
+      for (var p=0;p<ps.length;p++){ ps[p].classList.toggle('on', ps[p].dataset.r === role); }
+    }
+    if (updateUrl !== false){
+      var u = new URL(location.href);
+      if (role === 'all') u.searchParams.delete('role'); else u.searchParams.set('role', role);
+      try { history.replaceState(null, '', u.href); } catch(e){}
+    }
+  }
+  var initialRole = 'all';
+  try { initialRole = new URLSearchParams(location.search).get('role') || 'all'; } catch(e){}
+  applyRole(initialRole, false);
+  for (var rb=0; rb<roleButtons.length; rb++){
+    roleButtons[rb].addEventListener('click', function(){ applyRole(this.dataset.role); });
+  }
+
+  /* copy link */
+  var copyBtn = document.getElementById('copyLink');
+  if (copyBtn){
+    var resetTimer;
+    var copied = function(){
+      copyBtn.classList.add('done');
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(function(){ copyBtn.classList.remove('done'); }, 2400);
+    };
+    var fallbackCopy = function(){
+      var ta = document.createElement('textarea');
+      ta.value = location.href; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.top='-1000px'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); copied(); } catch(e){}
+      document.body.removeChild(ta);
+    };
+    copyBtn.addEventListener('click', function(){
+      if (navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(location.href).then(copied, fallbackCopy);
+      } else { fallbackCopy(); }
+    });
+  }
+})();
+</script>
+</body>
+</html>

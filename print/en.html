@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>17 Years Organising the Site — Eunsung Kang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>/* 로컬 정적 인스턴스 — 구글 가변폰트는 크로미움이 Type3(그림)으로 떨어뜨린다 (2026-11-24)
+   fonts/는 career/direct-apply/assets/make_fonts.py가 만든 서브셋을 복사해 둔 것 */
+@font-face{font-family:"Inter";src:url("fonts/InterSubset-w400.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:"Inter";src:url("fonts/InterSubset-w500.ttf") format("truetype");font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:"Inter";src:url("fonts/InterSubset-w600.ttf") format("truetype");font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:"Inter";src:url("fonts/InterSubset-w700.ttf") format("truetype");font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:"Noto Sans KR";src:url("fonts/NotoKRSubset-w400.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:"Noto Sans KR";src:url("fonts/NotoKRSubset-w500.ttf") format("truetype");font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:"Noto Sans KR";src:url("fonts/NotoKRSubset-w600.ttf") format("truetype");font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:"Noto Sans KR";src:url("fonts/NotoKRSubset-w700.ttf") format("truetype");font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:"Noto Sans KR";src:url("fonts/NotoKRSubset-w900.ttf") format("truetype");font-weight:900;font-style:normal;font-display:block}
+@font-face{font-family:"Pretendard Variable";src:url("fonts/PretendardSubset-w400.ttf") format("truetype");font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:"Pretendard Variable";src:url("fonts/PretendardSubset-w500.ttf") format("truetype");font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:"Pretendard Variable";src:url("fonts/PretendardSubset-w600.ttf") format("truetype");font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:"Pretendard Variable";src:url("fonts/PretendardSubset-w700.ttf") format("truetype");font-weight:700;font-style:normal;font-display:block}
+</style>
+<style>
+@page{size:210mm 297mm;margin:13mm 15mm 11mm}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:"Inter","Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"Noto Sans KR","Malgun Gothic",sans-serif;
+  color:#1a1d21;font-size:8.4pt;line-height:1.44;background:#fff;
+  -webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact;
+  word-break:normal;overflow-wrap:break-word;hyphens:none;
+}
+:root{
+  --ink:#141414;--red:#c93b2b;--indigo:#2f3d63;--olive:#6d6a2c;
+  --line:#ded9d0;--muted:#6f6c68;--tint:#f7f4ee;
+}
+.wrap{max-width:180mm;margin:0 auto;padding:0}
+a{color:inherit;text-decoration:none}
+
+/* ---------- page frame ---------- */
+.page{height:272mm;display:flex;flex-direction:column;break-after:page}
+.page:last-of-type{break-after:auto}
+.pbody{flex:1 1 auto;min-height:0}
+.pfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;
+  font-size:6.5pt;color:var(--muted);letter-spacing:.1em;border-top:1px solid var(--line);padding-top:1.2mm;text-transform:uppercase}
+.pfoot b{color:var(--ink);font-weight:700;letter-spacing:.14em}
+
+/* ---------- masthead ---------- */
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1.8pt solid var(--ink);padding-bottom:2.2mm;margin-bottom:2.8mm}
+.top .kick{font-size:6.6pt;font-weight:700;letter-spacing:.24em;color:var(--red);text-transform:uppercase;margin-bottom:1.8mm}
+.top .kick span{color:var(--muted);font-weight:500;margin-left:2mm}
+.top h1{margin:0;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:18pt;letter-spacing:-.01em;line-height:1;text-transform:uppercase}
+.top h1 small{display:block;font-family:"Inter",sans-serif;font-size:8.6pt;letter-spacing:.01em;color:#3a3835;font-weight:600;margin-top:1.8mm;text-transform:none}
+.top .meta{text-align:right;font-size:7.3pt;color:var(--muted);line-height:1.62}
+.top .meta b{color:var(--ink);font-size:8.3pt;letter-spacing:.01em}
+.top .meta em{font-style:normal;display:block;font-variant-numeric:tabular-nums}
+
+/* ---------- intro ---------- */
+.intro{display:flex;gap:3mm;padding:0 0 1.9mm;margin-bottom:2.2mm;border-bottom:1px solid var(--line)}
+.intro .bar{width:1.1mm;background:var(--red);flex:0 0 auto}
+.intro p{margin:0;font-size:8.9pt;line-height:1.4;color:#20242a}
+.intro p b{font-weight:700;color:var(--ink)}
+
+/* ---------- metric strip ---------- */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-top:1.4pt solid var(--ink);border-bottom:1px solid var(--line);margin:0 0 1mm}
+.metrics>div{padding:1.8mm 3.2mm 1.7mm;border-left:1px solid var(--line)}
+.metrics>div:first-child{border-left:0;padding-left:0}
+.metrics b{display:block;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:12.6pt;line-height:1.1;letter-spacing:-.01em;color:var(--ink);text-transform:uppercase}
+.metrics b u{text-decoration:none;font-size:7.4pt;color:var(--muted);margin-left:.8mm;font-family:"Inter",sans-serif;font-weight:600;text-transform:none}
+.metrics span{display:block;font-size:6.8pt;line-height:1.4;color:var(--muted);margin-top:1.2mm;letter-spacing:.01em}
+
+/* ---------- section header ---------- */
+h2.sec{display:flex;align-items:baseline;gap:2mm;font-size:7.2pt;font-weight:700;color:var(--ink);
+  margin:2.2mm 0 1.05mm;padding-bottom:.9mm;border-bottom:1px solid var(--line)}
+h2.sec .no{font-size:6.4pt;font-weight:700;color:var(--red);letter-spacing:.1em;font-variant-numeric:tabular-nums}
+h2.sec .t{letter-spacing:.18em;text-transform:uppercase}
+h2.sec .en{margin-left:auto;font-size:6.4pt;font-weight:500;letter-spacing:.04em;color:var(--muted)}
+h2.sec:first-of-type{margin-top:0}
+
+/* ---------- tables ---------- */
+.info{display:grid;grid-template-columns:1fr 22mm;gap:4mm;align-items:start}
+table{width:100%;border-collapse:collapse;break-inside:avoid}
+table th,table td{border-bottom:1px solid var(--line);padding:.46mm 2mm;text-align:left;vertical-align:top;font-size:7.6pt;line-height:1.37}
+table th{background:var(--tint);color:var(--ink);font-weight:600;white-space:nowrap;width:20mm;font-size:7.3pt;letter-spacing:.02em}
+table td:first-child{white-space:nowrap}
+table.cv th{background:var(--tint);width:auto;white-space:nowrap}
+table.cv td{font-size:7.6pt;padding:.8mm 2mm}
+table.cv td.p{white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums;font-size:7.4pt}
+table.cv td.co{font-weight:600;color:var(--ink)}
+table.cv td.nw{white-space:nowrap}
+.photo{width:22mm}
+.photo img{width:100%;display:block;border:1px solid var(--line)}
+.photo .cap{font-size:6.1pt;color:var(--muted);letter-spacing:.1em;margin-top:.8mm;text-transform:uppercase}
+
+/* ---------- skills band ---------- */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.skills>div{padding:1.8mm 3mm 1.7mm;border-left:1px solid var(--line)}
+.skills>div:first-child{border-left:0;padding-left:0}
+.skills .k{font-size:7.1pt;font-weight:700;color:var(--ink);letter-spacing:.04em}
+.skills .k i{display:inline-block;width:1.4mm;height:1.4mm;background:var(--red);margin-right:1.2mm;vertical-align:.3mm}
+.skills .v{font-size:6.8pt;line-height:1.45;color:#3b3b39;margin-top:1mm}
+
+/* ---------- experience ---------- */
+.job{margin-bottom:2mm;break-inside:avoid}
+.job .hd{display:flex;justify-content:space-between;align-items:baseline;gap:4mm;padding-bottom:.7mm;border-bottom:1px solid #ece8e1}
+.job .hd .l{display:flex;align-items:baseline;gap:2.2mm;flex-wrap:wrap}
+.job .hd .co{font-weight:700;font-size:8.8pt;color:var(--ink)}
+.job .hd .ro{font-size:7.9pt;color:#3d3d3b;font-weight:600}
+.job .hd .p{font-size:7.2pt;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.job ul{margin:.9mm 0 0;padding:0 0 0 3mm;list-style:none}
+.job li{position:relative;font-size:7.6pt;line-height:1.34;color:#2a2f35;margin-bottom:.3mm}
+.job li::before{content:"";position:absolute;left:-3mm;top:1.6mm;width:1.1mm;height:.35mm;background:var(--red)}
+.job .tags{font-size:6.8pt;color:var(--muted);letter-spacing:.02em;margin-top:.6mm}
+.chip{display:inline-block;font-size:5.8pt;font-weight:700;letter-spacing:.08em;line-height:1.5;text-transform:uppercase;
+  padding:0 1.2mm;border-radius:.5mm;color:#fff;background:#3a3a38;vertical-align:.35mm}
+.chip.q{background:var(--olive)}
+.chip.a{background:var(--red)}
+.chip.w{background:var(--indigo)}
+.legend{display:flex;gap:2.6mm;align-items:center;font-size:6.1pt;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.legend i{display:inline-block;width:1.5mm;height:1.5mm;border-radius:.3mm;margin-right:.9mm;vertical-align:-.1mm}
+
+/* ---------- part 2 ---------- */
+.parthead{display:flex;justify-content:space-between;align-items:flex-end;gap:6mm;
+  border-bottom:1.8pt solid var(--ink);padding-bottom:1.8mm;margin:0 0 2.2mm}
+.parthead .n{font-size:6.4pt;font-weight:700;letter-spacing:.22em;color:var(--red);margin-bottom:1.8mm;text-transform:uppercase}
+.parthead h2{margin:0;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:13.4pt;letter-spacing:-.005em;line-height:1.22;text-transform:uppercase}
+.parthead .r{text-align:right;font-size:6.5pt;color:var(--muted);letter-spacing:.12em;line-height:1.6;text-transform:uppercase}
+.parthead .r b{display:block;color:var(--ink);font-size:7.3pt;letter-spacing:.06em;text-transform:none;margin-bottom:.6mm}
+
+/* ---------- cover letter ---------- */
+.letter{--fs:8.6pt;--lh:1.6}
+.letter p{font-size:var(--fs);line-height:var(--lh);color:#24282d;margin:0 0 1.65mm;text-align:justify;orphans:2;widows:2}
+.letter h3{display:flex;align-items:baseline;gap:1.8mm;break-after:avoid;
+  font-size:8.6pt;font-weight:700;color:var(--ink);margin:2.5mm 0 1mm;padding-top:1.3mm;border-top:1px solid var(--line)}
+.letter h3 .n{font-size:6pt;font-weight:700;color:#fff;background:var(--red);padding:.3mm 1.1mm;letter-spacing:.06em;line-height:1.35}
+.letter h3:first-child{border-top:0;padding-top:0;margin-top:0}
+.letter .hl{background:linear-gradient(transparent 58%,#f3ddd6 58%);font-weight:600;color:#1a1d21}
+.sign{margin-top:2mm;padding-top:1.2mm;border-top:1px solid var(--line);display:flex;justify-content:flex-end}
+/* 웹 공개본에는 친필서명을 넣지 않는다(2026-11-24) — 서명 자리에 작은 안내만 남긴다 */
+.sigwrap{text-align:right}
+.sign .line{display:flex;justify-content:flex-end;align-items:baseline;gap:3mm;font-size:7.5pt;color:var(--muted);letter-spacing:.04em}
+.sign b{font-size:9.4pt;color:var(--ink);letter-spacing:.1em}
+.signote{font-size:6.4pt;color:var(--muted);letter-spacing:.01em;margin-top:1.1mm}
+
+.p3 .letter{--lh:1.53}
+.p3 .sign{margin-top:1.8mm;padding-top:1.1mm}
+.p3 .avail{margin-top:5.4mm}
+.avail{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.4pt solid var(--ink);border-bottom:1px solid var(--line);margin-top:3.2mm}
+.avail>div{padding:1.9mm 3mm 2mm;border-left:1px solid var(--line)}
+.avail>div:first-child{border-left:0;padding-left:0}
+.avail .k{font-size:6.3pt;font-weight:700;letter-spacing:.16em;color:var(--red);text-transform:uppercase}
+.avail .v{font-size:7.4pt;line-height:1.45;color:#26262a;margin-top:1.1mm}
+
+.note{font-size:6.9pt;color:var(--muted);margin-top:1.2mm;line-height:1.45;letter-spacing:.01em}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page p1">
+    <div class="pbody">
+      <div class="top">
+        <div>
+          <div class="kick">Curriculum vitae<span>2026</span></div>
+          <h1>Eunsung Kang<small>17 Years Organising the Site</small></h1>
+        </div>
+        <div class="meta">
+          <b>Quality · Site administration · Field operations</b>
+          <em>17 yrs 5 mos · 8 employers, all full-time</em>
+          <em>+82 10-4148-0120 · devgru.kang@gmail.com</em>
+          <em>Asan-si, Chungcheongnam-do · commutes to Cheonan/Asan</em>
+        </div>
+      </div>
+
+      <div class="intro">
+        <div class="bar"></div>
+        <p>For 17 years and 5 months I have gone to the site, <b>seen the problem myself</b>, <b>agreed a standard</b> with the people around me, and <b>written it down</b> so the next person can keep it.</p>
+      </div>
+
+      <div class="metrics">
+        <div><b>17 yrs 5 mos</b><span>Total experience · 8 employers<br>No contract or dispatch work</span></div>
+        <div><b>8<u>/ 8</u></b><span>Full-time permanent<br>Longest tenure 6 yrs 11 mos</span></div>
+        <div><b>2<u>sites</u></b><span>Corporate websites built<br>Parent and subsidiary, as PM</span></div>
+        <div><b>9<u>licences</u></b><span>Certificates and licences<br>Class 1 Large · forklift &lt;3 t</span></div>
+      </div>
+
+      <h2 class="sec"><span class="no">01</span><span class="t">Personal details</span><span class="en">인적 사항</span></h2>
+      <div class="info">
+        <table>
+          <tr><th>Name</th><td><b>Eunsung Kang</b> (강은성)</td><th style="width:24mm">Mobile</th><td>+82 10-4148-0120</td></tr>
+          <tr><th>Location</th><td>Asan-si, Chungcheongnam-do, Korea</td><th>E-mail</th><td>devgru.kang@gmail.com</td></tr>
+          <tr><th>Role sought</th><td colspan="3"><b>Quality management · site administration (permits) · field operations</b> — full-time permanent</td></tr>
+          <tr><th>Work pattern</th><td colspan="3">Shift work · six-day weeks · residential postings available</td></tr>
+          <tr><th>Commute / start</th><td colspan="3">Commutes to Cheonan and Asan · available at short notice</td></tr>
+        </table>
+        <div class="photo">
+          <img src="../assets/photo.jpg" alt="Eunsung Kang portrait">
+          <div class="cap">2026 · portrait</div>
+        </div>
+      </div>
+
+      <h2 class="sec"><span class="no">02</span><span class="t">Military service</span><span class="en">병역</span></h2>
+      <table>
+        <tr><th>Branch</th><td>R.O.K. Army (Joint Chiefs of Staff)</td><th>Rank</th><td>Sergeant, honourable discharge</td></tr>
+        <tr><th>Specialty</th><td>Intelligence (PSYOP)</td><th>Period</th><td>Sep 2002 – Oct 2004</td></tr>
+      </table>
+
+      <h2 class="sec"><span class="no">03</span><span class="t">Education</span><span class="en">학력</span></h2>
+      <table>
+        <tr><th>Period</th><th style="width:auto">School</th><th style="width:auto">Major / result</th></tr>
+        <tr><td>2001.03 – 2006.02</td><td>Shin Sung University</td><td>Dept. of Tax Accounting · Associate degree · GPA 3.10 / 4.0</td></tr>
+        <tr><td>1997.03 – 2000.02</td><td>Hyomyeong High School (Pyeongtaek)</td><td>Academic track, graduated</td></tr>
+      </table>
+
+      <h2 class="sec"><span class="no">04</span><span class="t">Certificates &amp; licences</span><span class="en">자격·면허</span></h2>
+      <table>
+        <tr><th>Issued</th><th style="width:auto">Certificate / licence</th><th style="width:auto">Issuing body</th></tr>
+        <tr><td>2024.09.23</td><td>Licensed insurance planner — non-life registration A24092300200 / third-sector registration B24092300202</td><td>Meritz Fire &amp; Marine Insurance (Partners HQ, Partners Chungcheong Centre) · appointed 23 Sep 2024, current as of 20 Nov 2026</td></tr>
+        <tr><td>2024.03</td><td>Construction Machinery Operator Licence (forklift, under 3 tons)</td><td>Ministry of Land, Infrastructure and Transport</td></tr>
+        <tr><td>2013.05</td><td>Driver's Licence, Class 1 Large</td><td>Gyeonggi Provincial Police Agency</td></tr>
+        <tr><td>2010.04</td><td>Driver's Licence, Class 1 Ordinary</td><td>Gyeonggi Provincial Police Agency</td></tr>
+        <tr><td>2012.01</td><td>Coffee Barista / Barista Grade 2</td><td>Korea Ability Education Development Institute · Korea Coffee Experts Association</td></tr>
+        <tr><td>2005.05 / 1999.03</td><td>Hapkido 2nd Dan / Taekwondo 3rd Dan</td><td>Korea Hapkido Association · Kukkiwon</td></tr>
+      </table>
+
+      <h2 class="sec"><span class="no">05</span><span class="t">Training</span><span class="en">직업훈련</span></h2>
+      <table>
+        <tr><th>Period</th><th style="width:auto">Provider</th><th style="width:auto">Course</th></tr>
+        <tr><td>2024.07 – 2024.08</td><td>Grim Computer Academy, Cheonan</td><td>AutoCAD &amp; SketchUp for interior design — drawing interpretation, equipment layout</td></tr>
+        <tr><td>2021.12 – 2022.06</td><td>C.E.T.I Computer Academy</td><td>Java Android app development with AI and big data</td></tr>
+        <tr><td>2021.05 – 2021.10</td><td>C.E.T.I Computer Academy</td><td>Full-stack web &amp; app developer course (HTML, CSS, MySQL, GitHub)</td></tr>
+        <tr><td>2019.05 – 2021.01</td><td>English language study, Philippines</td><td>Everyday conversation and basic work English — basic to intermediate, 1 yr 8 mos (no official test score)</td></tr>
+      </table>
+
+      <h2 class="sec"><span class="no">06</span><span class="t">Capabilities &amp; tools</span><span class="en">핵심 역량</span></h2>
+      <div class="skills">
+        <div><div class="k"><i></i>Quality · inspection</div><div class="v">QC tools · ISO · defect coding<br>Excel VBA · written procedures</div></div>
+        <div><div class="k"><i></i>Site administration</div><div class="v">Permits and licensing · authorities<br>Material supply · schedules</div></div>
+        <div><div class="k"><i></i>Web · IT</div><div class="v">Web build PM · HTML/CSS · MySQL<br>Servers · Cisco network · HIS</div></div>
+        <div><div class="k"><i></i>Field · equipment</div><div class="v">AutoCAD · SketchUp · SAP ERP<br>Class 1 Large · forklift &lt;3 t</div></div>
+      </div>
+
+      <div class="note">Public web version: home address, date of birth and handwritten signature are omitted for security. Salary at previous employers is not disclosed.</div>
+    </div>
+    <div class="pfoot"><span><b>Eunsung Kang</b> · Resume &amp; cover letter 2026</span><span>01 / 03</span></div>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page p2">
+    <div class="pbody">
+      <h2 class="sec" style="margin-top:0"><span class="no">07</span><span class="t">Employment summary</span><span class="en">경력 사항</span></h2>
+      <table class="cv">
+        <tr><th>Period</th><th>Company</th><th>Role</th><th>Scope</th><th class="nw">Type</th></tr>
+        <tr><td class="p">2025.02 – 2026.02</td><td class="co">SH Shinhan ESLD Co., Ltd.</td><td>Site administration</td><td>Site administration for photovoltaic plants: permits, materials, quality, two corporate websites led as PM</td><td class="nw">Permanent</td></tr>
+        <tr><td class="p">2023.04 – 2024.05</td><td class="co">BP Works (Corning Precision Materials)</td><td>Packaging quality</td><td>Outgoing inspection of glass materials; standardised inspection criteria</td><td class="nw">Permanent</td></tr>
+        <tr><td class="p">2022.11 – 2023.03</td><td class="co">Kyungdong Parcel</td><td>Logistics driver</td><td>5-ton freight; warehouse stock and receipt/despatch control</td><td class="nw">Permanent</td></tr>
+        <tr><td class="p">2022.06 – 2022.10</td><td class="co">CETI Computer Academy</td><td>Instructor</td><td>IT fundamentals and programming; project supervision</td><td class="nw">Permanent</td></tr>
+        <tr><td class="p">2012.04 – 2019.03</td><td class="co">HKR (SsangYong Motor)</td><td>Assembly line 2</td><td>Vehicle assembly; purchasing and parts quality management</td><td class="nw">Permanent</td></tr>
+        <tr><td class="p">2009.04 – 2012.01</td><td class="co">Bakae Medical Foundation</td><td>IT &amp; facilities</td><td>Hospital network, servers, HIS and facility maintenance</td><td class="nw">Permanent</td></tr>
+        <tr><td class="p">2005.11 – 2009.02</td><td class="co">KARMA STUDIO</td><td>Photography</td><td>Commercial photography and retouching; print quality control</td><td class="nw">Permanent</td></tr>
+        <tr><td class="p">2004.04 – 2005.10</td><td class="co">Bugang Telecom</td><td>IT operations</td><td>KT telecom systems, fault response and customer support</td><td class="nw">Permanent</td></tr>
+      </table>
+      <div class="note">17 years 5 months in total across eight employers; all full-time permanent, none contract or dispatch. Salary at previous employers is not disclosed.</div>
+
+      <h2 class="sec"><span class="no">08</span><span class="t">Professional experience</span>
+        <span class="legend" style="margin-left:auto">
+          <span><i style="background:var(--olive)"></i>Quality</span>
+          <span><i style="background:var(--red)"></i>Site admin</span>
+          <span><i style="background:var(--indigo)"></i>IT</span>
+          <span><i style="background:#3a3a38"></i>Production</span>
+        </span>
+        <span class="en" style="margin-left:0">경력 기술서</span>
+      </h2>
+
+      <div class="job">
+        <div class="hd"><div class="l"><span class="chip a">Site</span><span class="chip w">Web</span><span class="co">SH Shinhan ESLD Co., Ltd.</span><span class="ro">Site administration · photovoltaic plants</span></div><span class="p">2025.02 – 2026.02</span></div>
+        <ul>
+          <li>Site administration for photovoltaic power plants: on-site process support, permit and licensing documents, coordination with authorities, issue handling.</li>
+          <li>Material supply and receipt, quality management (standard checks, defect issues); tracked materials and open issues in Excel and wrote the reports.</li>
+          <li>Led the build of two company websites, parent and subsidiary, as PM: selected the outsourced development vendor, managed contract and schedule, and directed the content and design direction (launched Dec 2025 / Jan 2026).</li>
+          <li>Left 11 business-process documents, 16 construction case studies and five years of delivery records.</li>
+        </ul>
+        <div class="tags">Excel · AutoCAD · permits · web build</div>
+      </div>
+
+      <div class="job">
+        <div class="hd"><div class="l"><span class="chip q">Quality</span><span class="co">BP Works (Corning Precision Materials)</span><span class="ro">Packaging Department · inspection</span></div><span class="p">2023.04 – 2024.05</span></div>
+        <ul>
+          <li>Improved the outgoing packaging inspection process and standardised quality criteria, cutting variation between shifts.</li>
+          <li>Built a defect-type root-cause system and used the data to find where problems started, improving inspection efficiency.</li>
+          <li>Coded defect types, summarised them in Excel VBA, and wrote the inspection procedure down at the bench.</li>
+        </ul>
+        <div class="tags">QC Tools · Excel VBA · ISO</div>
+      </div>
+
+      <div class="job">
+        <div class="hd"><div class="l"><span class="chip">Logistics</span><span class="co">Kyungdong Parcel</span><span class="ro">Logistics Department · driver</span></div><span class="p">2022.11 – 2023.03</span></div>
+        <ul>
+          <li>Analysed the main delivery routes and re-planned them, cutting delivery time and fuel cost.</li>
+          <li>Contributed to a better warehouse stock system, reducing receipt and despatch errors and losses.</li>
+        </ul>
+        <div class="tags">WMS · GPS route management · stock counts</div>
+      </div>
+
+      <div class="job">
+        <div class="hd"><div class="l"><span class="chip w">IT</span><span class="co">CETI Computer Academy</span><span class="ro">Academic affairs · instructor</span></div><span class="p">2022.06 – 2022.10</span></div>
+        <ul>
+          <li>Taught practical HTML, CSS, MySQL and GitHub to students with no IT background.</li>
+          <li>Reworked the curriculum to the students' level and kept assignment feedback in writing.</li>
+        </ul>
+        <div class="tags">HTML · CSS · MySQL · GitHub</div>
+      </div>
+
+      <div class="job">
+        <div class="hd"><div class="l"><span class="chip">Production</span><span class="chip q">Quality</span><span class="co">HKR (SsangYong Motor)</span><span class="ro">Assembly Line 2</span></div><span class="p">2012.04 – 2019.03</span></div>
+        <ul>
+          <li>Worked on the vehicle assembly line checking incoming parts and making defect calls with purchasing and parts quality staff.</li>
+          <li>Managed parts flow and stock in SAP ERP and organised recurring bottlenecks on the line to improve work efficiency.</li>
+          <li>For each defect recorded photographs, quantity and time of occurrence, sent them to the supplier and followed the countermeasure until confirmed.</li>
+        </ul>
+        <div class="tags">SAP ERP · Lean manufacturing · supplier follow-up</div>
+      </div>
+
+      <div class="job">
+        <div class="hd"><div class="l"><span class="chip w">IT</span><span class="co">Bakae Medical Foundation</span><span class="ro">IT &amp; facility management · team leader</span></div><span class="p">2009.04 – 2012.01</span></div>
+        <ul>
+          <li>Ran the hospital network, servers, HIS operations and facility maintenance, and managed team members and shift assignments.</li>
+          <li>Simplified the internal IT support process, shortening response time for failures.</li>
+        </ul>
+        <div class="tags">Servers · Cisco network · MySQL · HIS</div>
+      </div>
+
+      <div class="job">
+        <div class="hd"><div class="l"><span class="chip">Photography</span><span class="co">KARMA STUDIO</span><span class="ro">Photography and editing</span></div><span class="p">2005.11 – 2009.02</span></div>
+        <ul>
+          <li>Commercial photography, lighting and retouching (Photoshop, Lightroom), keeping colour and brightness consistent across deliverables.</li>
+          <li>Managed deadlines on large commercial shoots and reduced rework through print quality control.</li>
+        </ul>
+        <div class="tags">Photoshop · Lightroom · DSLR</div>
+      </div>
+    </div>
+    <div class="pfoot"><span><b>Eunsung Kang</b> · Resume &amp; cover letter 2026</span><span>02 / 03</span></div>
+  </div>
+
+  <!-- ==================== PAGE 3 ==================== -->
+  <div class="page p3">
+    <div class="pbody">
+      <div class="job">
+        <div class="hd"><div class="l"><span class="chip w">IT</span><span class="co">Bugang Telecom</span><span class="ro">IT operations · KT telecom systems</span></div><span class="p">2004.04 – 2005.10</span></div>
+        <ul>
+          <li>Maintained the KT telecom IT systems and equipment, handled fault response and customer support.</li>
+          <li>Organised customer request handling, cutting response time and complaints.</li>
+        </ul>
+        <div class="tags">KT systems · CRM · networking</div>
+      </div>
+
+      <div class="parthead">
+        <div>
+          <div class="n">Part 2 · Cover letter</div>
+          <h2>A standard left behind changes the site</h2>
+        </div>
+        <div class="r"><b>자기소개서</b>4 questions · Asan, Korea</div>
+      </div>
+
+      <div class="letter">
+        <h3><span class="n">1</span>Why all eight were full-time</h3>
+        <p>My name is Eunsung Kang. I have spent 17 years and 5 months in full-time work, and most of it on the floor of a plant, a warehouse or a site. I started in IT, moved into vehicle assembly at SsangYong Motor for 6 years 11 months, inspected the outgoing packaging of glass materials at Corning Precision Materials, drove and managed freight at Kyungdong Parcel, taught IT to adults, and most recently handled permits, materials and schedules for photovoltaic power plants.</p>
+        <p>The products and the job titles changed every time. <span class="hl">What did not change was the actual work</span>: go and see the problem, agree a standard with the people around me, write it down so it survives me, and use the numbers to find where the problem started. That is the part of the job I am good at, and it is the part I want to keep doing.</p>
+
+        <h3><span class="n">2</span>Coding the factory floor</h3>
+        <p>At Corning Precision Materials, inspectors judged the same product slightly differently, so the same item would pass with one person and be sent for a second look by another. I grouped defect types, gave them codes and summarised them in Excel so the frequent ones became visible, then wrote the inspection procedure down and put it beside the bench. Arguments over the same issue became fewer and new staff learned faster.</p>
+        <p>At SsangYong Motor I checked incoming parts with purchasing and quality staff. When a part did not meet specification the line had to stop for a decision, so I recorded photographs, quantity and time of occurrence, sent them to the supplier and confirmed the countermeasure. After 6 years 11 months on the same line I knew which defects appear at which process, and I learned that <span class="hl">written criteria and the sense gained on the floor have to be used together</span> or judgement drifts.</p>
+        <p>At my last employer I handled permit documents, authority coordination, material supply and contractor schedules for power plants, and I also led the build of two company websites: choosing the vendor, managing contract and schedule, preparing the content and deciding the design direction. Different work, same method — decide what has to be true, put it in a document, and follow it until it is finished.</p>
+
+        <h3><span class="n">3</span>Few words, finished work</h3>
+        <p>My strength is diligence. I was born in Pyeongtaek and never missed a perfect-attendance award or a full attendance record at school. That may sound like a small thing to say, but keeping a standard comes down to turning up at the same place every day and repeating the same procedure. I have never been absent without notice in any of the eight workplaces.</p>
+        <p>The gap I am aware of is depth in a single specialty. I have worked across production, quality, logistics, IT and site administration rather than staying in one field for 17 years. That gives me an understanding of how the departments around me actually work; what it costs me is that I have to learn the technical detail of a new field from the beginning. I read procedures and specifications carefully, ask until I understand, and write down what I am told so I do not ask twice.</p>
+
+        <h3><span class="n">4</span>Ask once, write it down</h3>
+        <p>In the first month I would learn how the site runs: who does what, where work stops, and which documents actually govern the job. Then I would take the part I am given and make it visible — a checklist, a tracking sheet or a short written procedure — so that the state of the work can be seen by anyone without asking me.</p>
+        <p>I do not need a title to start. What I want is a place where the work has a standard and someone has to keep it, and where being careful and finishing things is worth something. With 17 years and 5 months of full-time experience, I intend this next position to be a long-term commitment.</p>
+      </div>
+
+      <div class="sign">
+        <div class="sigwrap">
+          <div class="line"><span>22 November 2026</span><b>Applicant: Eunsung Kang</b></div>
+          <div class="signote">The handwritten signature is omitted from this public web version for security.</div>
+        </div>
+      </div>
+
+      <div class="avail">
+        <div><div class="k">Work pattern</div><div class="v">Full-time permanent · shift work · six-day weeks · residential postings</div></div>
+        <div><div class="k">Commute</div><div class="v">Cheonan and Asan by car · Class 1 Large and forklift (&lt;3 t) licensed</div></div>
+        <div><div class="k">Start</div><div class="v">Available at short notice · English: everyday conversation and basic work communication</div></div>
+      </div>
+    </div>
+    <div class="pfoot"><span><b>Eunsung Kang</b> · Resume &amp; cover letter 2026</span><span>03 / 03</span></div>
+  </div>
+
+</div>
+</body>
+</html>
