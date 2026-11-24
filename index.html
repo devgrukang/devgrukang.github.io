@@ -1510,8 +1510,8 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
   var reelTrack = document.getElementById('reelTrack');
   var toggle = document.getElementById('reelToggle');
   if (reel && reelTrack){
-    /* 동작 줄이기 설정에서는 자동으로 흐르지 않고, 재생 버튼으로 직접 시작한다 */
-    var userPaused = reduce;
+    /* 접속하면 바로 자동으로 흐른다. 동작 줄이기 설정에서도 정지 상태로 시작하지 않는다(재생 버튼은 그대로 토글) */
+    var userPaused = false;
     var dragging = false;
     var pressing = false;
     var suppressClick = false;
