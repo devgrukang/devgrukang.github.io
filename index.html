@@ -246,7 +246,8 @@ html[lang="ko"] h1 .latin{font-size:clamp(12px,1.25vw,15px)}
 .reel.dragging{cursor:grabbing;user-select:none;-webkit-user-select:none}
 .reel:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
 .reel-track{display:flex;width:max-content}
-.frame{width:clamp(232px,25vw,296px);flex:none;padding:26px 26px 28px 0;border-right:1px solid var(--rule-soft)}
+.frame{width:clamp(232px,25vw,296px);flex:none;padding:26px 26px 28px 0;border-right:1px solid var(--rule-soft);cursor:pointer}
+.reel.dragging .frame{cursor:grabbing}
 .frame .cat{margin-bottom:14px}
 .frame .yr{font-size:var(--t-nano);letter-spacing:.14em;color:var(--ink-30);text-transform:uppercase;margin-left:10px}
 .frame h3{margin-top:10px;font-size:15.5px;font-weight:600;letter-spacing:-0.02em;line-height:1.45}
@@ -1509,12 +1510,16 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
   var reelTrack = document.getElementById('reelTrack');
   var toggle = document.getElementById('reelToggle');
   if (reel && reelTrack){
-    var userPaused = false;
+    /* 동작 줄이기 설정에서는 자동으로 흐르지 않고, 재생 버튼으로 직접 시작한다 */
+    var userPaused = reduce;
     var dragging = false;
+    var pressing = false;
+    var suppressClick = false;
     var hovering = false;
     var holdUntil = 0;
     var startX = 0, startScroll = 0;
-    var SPEED = 0.55;
+    var SPEED = 1; /* 60fps 기준 초당 60px */
+    var TAP_SLOP = 6;
     var frames = [].slice.call(reelTrack.children);
     var baseCount = Math.floor(frames.length / 2) || frames.length;
     var baseFrames = frames.slice(0, baseCount);
@@ -1550,50 +1555,80 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
       if (setW) reel.scrollLeft = setW;
     };
     recentre();
-    if (!reduce){
-      var step = function(){
-        if (!userPaused && !dragging && !hovering && Date.now() >= holdUntil){
-          reel.scrollLeft += SPEED;
+    /* 시간 기준 누적 이동: scrollLeft가 정수로 반올림되는 브라우저에서도 흐름이 끊기지 않게 */
+    var acc = 0, lastT = 0;
+    var step = function(t){
+      var dt = lastT ? Math.min(64, t - lastT) : 16.7;
+      lastT = t;
+      if (!userPaused && !dragging && !hovering && Date.now() >= holdUntil){
+        acc += SPEED * (dt / 16.7);
+        var whole = Math.floor(acc);
+        if (whole > 0){
+          acc -= whole;
+          reel.scrollLeft += whole;
           wrap();
         }
-        window.requestAnimationFrame(step);
-      };
+      } else {
+        acc = 0;
+      }
       window.requestAnimationFrame(step);
-    }
+    };
+    window.requestAnimationFrame(step);
+    var setToggle = function(){
+      if (!toggle) return;
+      toggle.setAttribute('aria-pressed', String(userPaused));
+      toggle.innerHTML = userPaused ? '<span class="l-ko">재생</span><span class="l-en">Play</span>'
+                                    : '<span class="l-ko">일시정지</span><span class="l-en">Pause</span>';
+    };
+    setToggle();
     if (toggle){
       toggle.addEventListener('click', function(){
         userPaused = !userPaused;
-        toggle.setAttribute('aria-pressed', String(userPaused));
-        toggle.innerHTML = userPaused ? '<span class="l-ko">재생</span><span class="l-en">Play</span>'
-                                      : '<span class="l-ko">일시정지</span><span class="l-en">Pause</span>';
+        setToggle();
         apply(root.getAttribute('lang'));
       });
     }
-    /* 마우스·펜 드래그 */
+    /* 마우스·펜 드래그: 실제로 끌었을 때만 포인터를 잡는다(그냥 누른 카드의 링크 클릭은 살린다) */
     reel.addEventListener('pointerdown', function(e){
       if (e.pointerType === 'touch' || (e.pointerType === 'mouse' && e.button !== 0)) return;
-      dragging = true;
+      pressing = true;
+      dragging = false;
       startX = e.clientX;
       startScroll = reel.scrollLeft;
-      reel.classList.add('dragging');
-      if (reel.setPointerCapture){ try { reel.setPointerCapture(e.pointerId); } catch(err){} }
-      e.preventDefault();
     });
     reel.addEventListener('pointermove', function(e){
-      if (!dragging) return;
-      reel.scrollLeft = startScroll - (e.clientX - startX);
+      if (!pressing) return;
+      var dx = e.clientX - startX;
+      if (!dragging){
+        if (Math.abs(dx) < TAP_SLOP) return;
+        dragging = true;
+        reel.classList.add('dragging');
+        if (reel.setPointerCapture){ try { reel.setPointerCapture(e.pointerId); } catch(err){} }
+      }
+      reel.scrollLeft = startScroll - dx;
       wrap();
       e.preventDefault();
     });
     var endDrag = function(){
+      if (!pressing) return;
+      pressing = false;
       if (!dragging) return;
       dragging = false;
+      suppressClick = true;
       reel.classList.remove('dragging');
       wrap();
       holdUntil = Date.now() + 900;
+      window.setTimeout(function(){ suppressClick = false; }, 60);
     };
     reel.addEventListener('pointerup', endDrag);
     reel.addEventListener('pointercancel', endDrag);
+    /* 끌어서 옮긴 직후의 클릭은 링크 이동으로 처리하지 않는다 */
+    reel.addEventListener('click', function(e){
+      if (!suppressClick) return;
+      e.preventDefault();
+      e.stopPropagation();
+    }, true);
+    reel.addEventListener('dragstart', function(e){ e.preventDefault(); });
     /* 터치 스와이프: 네이티브 스크롤을 쓰고, 그동안 자동 흐름만 멈춘다 */
     reel.addEventListener('touchstart', function(){ holdUntil = Date.now() + 60000; }, {passive:true});
     reel.addEventListener('touchend', function(){ wrap(); holdUntil = Date.now() + 900; }, {passive:true});
