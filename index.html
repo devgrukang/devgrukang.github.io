@@ -243,6 +243,18 @@ html[lang="ko"] h1 .latin{font-size:clamp(12px,1.25vw,15px)}
 .film-stage{position:relative;overflow:hidden;background:var(--ink);border:1px solid var(--rule);aspect-ratio:1920 / 800}
 /* 테두리 1px 안쪽이 정확히 2.39:1 이 되도록 비율은 액자에 걸고, 영상은 채워 넣는다(레터박스 없음) */
 .film video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;background:var(--ink)}
+/* 액자 전체가 재생 버튼이다 — 누르면 이어서 재생되고, 무음이면 소리가 켜진다.
+   (정책·탭 전환 등으로) 멈춰 있을 때만 가운데에 작은 재생 표시를 얹어 알린다. */
+.film-stage{cursor:pointer}
+.film-stage[data-state="paused"]::after{
+  content:"\25B6";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  display:flex;align-items:center;justify-content:center;
+  width:60px;height:60px;padding-left:4px;border-radius:50%;
+  border:1px solid rgba(250,249,246,.5);background:rgba(17,17,16,.6);color:#faf9f6;
+  font-size:19px;line-height:1;
+  pointer-events:none;z-index:1;
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+}
 .film figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;margin-top:9px;font-size:var(--t-nano);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-40);line-height:1.5}
 .film figcaption .f-r{color:var(--ink-30)}
 /* 소리 켜기 / 음악 끄기 — 44px 터치 영역, 크림 글자 × 먹색 바탕. 라벨이 바뀌어도 잘리지 않게 한 줄 고정 */
@@ -822,7 +834,7 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
     <figure class="film">
       <div class="film-frame">
         <div class="film-stage">
-          <video id="heroFilm" muted loop playsinline preload="auto" poster="assets/ricky_director_cut_poster.jpg" aria-label="Back to the Field — 현장·설비·문서 20초 영상">
+          <video id="heroFilm" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/ricky_director_cut_poster.jpg" aria-label="Back to the Field — 현장·설비·문서 20초 영상">
             <source src="assets/ricky_director_cut_portfolio_20s.mp4" type="video/mp4">
           </video>
         </div>
@@ -1636,36 +1648,48 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
   }
   apply(initial);
 
-  /* 메인 필름: 소리 포함 자동재생을 먼저 시도하고, 브라우저 정책에 막히면(NotAllowedError 등)
-     무음으로 재생을 이어 간 뒤 방문자의 첫 조작(클릭·터치·키 입력)에서 소리를 켠다.
+  /* 메인 필름: 소리 포함 재생을 먼저 시도하고, 브라우저 정책에 막히면(NotAllowedError 등)
+     즉시 무음 재생으로 넘어가 영상이 멈춰 있지 않게 한다. 소리는 방문자의 첫 조작
+     (클릭·터치·키 입력)에서 켜고, 영상이나 액자를 눌러도 재생이 시작·유지된다.
      단, 방문자가 버튼으로 직접 끈 소리(userMuted)는 이후 조작에서도 다시 켜지 않는다. */
   var film = document.getElementById('heroFilm');
   var filmSnd = document.getElementById('filmSound');
+  var filmStage = film ? (film.closest ? film.closest('.film-stage') : film.parentNode) : null;
   if (film && filmSnd){
     var userMuted = false;              /* 방문자가 버튼으로 직접 소리를 껐는가 */
     var armed = false;                  /* 무음 폴백 상태에서 첫 조작을 기다리는가 */
-    var GESTURES = ['pointerdown','touchend','keydown'];
+    var GESTURES = ['click','touchend','keydown'];  /* pointerdown 은 모바일에서 user activation 으로 인정되지 않는다 */
 
-    function keepPlaying(){
-      if (film.paused){
-        var p = film.play();
-        if (p && p.catch) p.catch(function(){});
-      }
-    }
     function syncSound(){
       filmSnd.setAttribute('data-sound', film.muted ? 'off' : 'on');
+      if (filmStage) filmStage.setAttribute('data-state', film.paused ? 'paused' : 'playing');
     }
-    function unmute(){
+    /* 무음 재생 — 어떤 경우에도 영상이 정지 상태로 남지 않게 하는 마지막 그물 */
+    function playMuted(){
+      film.muted = true;
+      syncSound();
+      var p = film.play();
+      if (p && p.catch) p.catch(function(){ /* 다음 조작에서 다시 시도한다 */ });
+    }
+    /* 소리 포함 재생 시도 → 거절되면 즉시 무음 재생으로 폴백 */
+    function playWithSound(){
       film.muted = false;
       film.volume = 1;
-      keepPlaying();
       syncSound();
+      var p = film.play();
+      if (p && p.then){
+        p.then(function(){ syncSound(); }, function(){ playMuted(); armUnmute(); });
+      } else {
+        playMuted();
+      }
     }
-    function silenceFallback(){
-      film.muted = true;
-      keepPlaying();
-      syncSound();
-      armUnmute();
+    function keepPlaying(){
+      if (!film.paused) return;
+      if (film.muted || userMuted){ playMuted(); } else { playWithSound(); }
+    }
+    function unmute(){
+      userMuted = false;
+      playWithSound();          /* 실패하면 playMuted() 로 무음 재생을 이어 간다 */
     }
     function onFirstGesture(e){
       if (userMuted || !film.muted){ disarm(); return; }
@@ -1690,26 +1714,43 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
 
     filmSnd.addEventListener('click', function(){
       if (film.muted){                      /* 소리 켜기 */
-        userMuted = false;
         unmute();
       } else {                              /* 음악 끄기 */
         userMuted = true;
         film.muted = true;
         syncSound();
+        keepPlaying();                      /* 소리를 꺼도 영상은 계속 흐른다 */
       }
     });
+    /* 영상·액자를 누르면 재생 — 멈춰 있으면 즉시 재생하고, 무음이면 소리를 켠다.
+       이미 소리와 함께 재생 중이면 실수로 멈추지 않게 그대로 이어 간다. */
+    if (filmStage){
+      filmStage.addEventListener('click', function(e){
+        if (filmSnd.contains(e.target)) return;    /* 버튼은 자기 핸들러가 처리 */
+        if (film.ended){ try { film.currentTime = 0; } catch(err){} }
+        if (film.paused){
+          if (userMuted){ playMuted(); } else { unmute(); }
+          return;
+        }
+        if (film.muted && !userMuted){ unmute(); }
+      });
+    }
     film.addEventListener('volumechange', syncSound);
     film.addEventListener('play', syncSound);
+    film.addEventListener('playing', syncSound);
+    film.addEventListener('pause', syncSound);
+    /* 화면으로 돌아오거나 데이터가 준비되면 멈춘 채로 남지 않게 이어 재생한다 */
+    document.addEventListener('visibilitychange', function(){
+      if (document.visibilityState === 'visible') keepPlaying();
+    });
+    film.addEventListener('loadeddata', keepPlaying);
+    film.addEventListener('canplay', keepPlaying);
 
     syncSound();
-    /* 1) 소리 포함 자동재생 시도 → 2) 차단되면 무음 재생으로 폴백 */
-    film.muted = false;
-    var pr = film.play();
-    if (pr && pr.then){
-      pr.then(function(){ syncSound(); }, function(){ silenceFallback(); });
-    } else {
-      silenceFallback();
-    }
+    /* 1) 소리 포함 자동재생 시도 → 2) 차단되면 즉시 무음 재생으로 폴백 */
+    playWithSound();
+    /* 데이터가 준비된 뒤에도 멈춰 있으면 한 번 더 무음 재생을 보장한다 */
+    setTimeout(function(){ if (film.paused) playMuted(); }, 1200);
   }
 
   /* header + progress */
