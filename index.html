@@ -198,6 +198,8 @@ html[lang="ko"] .dlrow .flag{letter-spacing:0}
 .avail{display:inline-flex;align-items:center;gap:7px;font-size:var(--t-nano);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-70);border:1px solid var(--rule);border-radius:999px;padding:6px 11px;background:#fff}
 .avail::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);flex:none}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) clamp(132px,15vw,188px);gap:clamp(24px,4vw,60px);align-items:start}
+/* 사진이 DOM 앞에 있어야 좁은 화면에서 float 로 이름 옆에 앉힐 수 있다 — 격자 위치는 열을 직접 지정 */
+.hero-grid > div{grid-column:1;grid-row:1;min-width:0}
 h1{
   font-size:var(--t-display);line-height:.94;letter-spacing:-0.035em;font-weight:700;color:var(--ink);
 }
@@ -224,7 +226,7 @@ html[lang="ko"] h1 .latin{font-size:clamp(12px,1.25vw,15px)}
 .textlink{font-size:var(--t-small);color:var(--ink-70);border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .25s,border-color .25s;white-space:nowrap}
 .textlink:hover{color:var(--ink);border-bottom-color:var(--red)}
 .textlink.plain{border:0;color:var(--ink-50)}
-.portrait{position:relative}
+.portrait{position:relative;grid-column:2;grid-row:1;align-self:start}
 .portrait img{width:100%;aspect-ratio:912/1172;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.04)}
 .portrait figcaption{margin-top:10px;font-size:var(--t-nano);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-40);line-height:1.5}
 
@@ -234,6 +236,10 @@ html[lang="ko"] h1 .latin{font-size:clamp(12px,1.25vw,15px)}
    영상은 cover 로 채워 띠를 정확히 잘라 낸다 — 그림은 하나도 잃지 않는다(실측 12.78%씩).
    상단 소개(이름·증명사진·핵심 숫자) 아래에서 본문 폭을 꽉 채우는 띠로 앉힌다. */
 .film{margin:clamp(18px,2.8vh,28px) auto clamp(26px,4vh,38px);width:100%}
+/* 액자(.film-frame)가 영상과 소리 버튼의 공통 기준이다 — 데스크톱에서는 버튼을 액자 아래 모서리에
+   절대 위치로 얹어 지금처럼 영상 위에 띄우고, 좁은 화면에서는 액자를 display:contents 로 풀어
+   버튼을 캡션 줄의 한 칸으로 내린다(영상 위를 가리지 않게). */
+.film-frame{position:relative}
 .film-stage{position:relative;overflow:hidden;background:var(--ink);border:1px solid var(--rule);aspect-ratio:1920 / 800}
 /* 테두리 1px 안쪽이 정확히 2.39:1 이 되도록 비율은 액자에 걸고, 영상은 채워 넣는다(레터박스 없음) */
 .film video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;background:var(--ink)}
@@ -259,8 +265,22 @@ html[lang="ko"] h1 .latin{font-size:clamp(12px,1.25vw,15px)}
 .film-snd[data-sound="on"] .ico-on,.film-snd[data-sound="on"] .t-on{display:inline}
 /* 좁은 화면에서는 영상 속 자막을 가리지 않게 버튼을 조금 줄인다(높이는 44px 유지) */
 @media (max-width:420px){
-  .film-snd{right:10px;bottom:10px;padding:0 12px;gap:6px;font-size:11.5px}
+  .film-snd{padding:0 12px;gap:6px;font-size:11.5px}
   .film-snd .snd-ico{font-size:13px}
+}
+/* 640px 이하 — 버튼을 영상 위에서 내려 캡션 줄 오른쪽에 나란히 둔다. 영상 화면은 100% 비운다.
+   액자(.film-frame)를 display:contents 로 풀면 영상과 버튼이 .film 격자의 항목이 되어
+   영상은 윗줄 전체, 캡션과 버튼은 아랫줄 두 칸에 앉는다. */
+@media (max-width:640px){
+  .film{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;align-items:center}
+  .film-frame{display:contents}
+  .film-stage{grid-column:1 / -1;grid-row:1}
+  .film figcaption{grid-column:1;grid-row:2;margin-top:8px;align-self:center}
+  .film-snd{grid-column:2;grid-row:2;position:static;justify-self:end;align-self:center;margin-top:8px}
+  /* 캡션 줄이 버튼과 나란히 두 줄을 넘지 않게, 소리 안내는 버튼이 대신한다 */
+  .film figcaption .f-r{display:none}
+  .film figcaption{letter-spacing:.06em}
+  .film figcaption .cap-t{white-space:nowrap}
 }
 
 /* ---------- 수치 띠 ---------- */
@@ -446,8 +466,9 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
 }
 @media (max-width:900px){
   .hdr nav{display:none}
-  .hero-grid{grid-template-columns:1fr;gap:28px}
-  .portrait{width:112px;order:-1}
+  /* 증명사진은 이름 옆 오른쪽에 작게 — 한 줄을 통째로 쓰지 않아 첫 화면이 짧아진다 */
+  .hero-grid{grid-template-columns:minmax(0,1fr) 96px;gap:0 16px;align-items:start}
+  .portrait{width:auto;order:0;grid-column:2;grid-row:1;align-self:start}
   .portrait figcaption{display:none}
   .statement{max-width:22em}
   .rolelead{margin-top:12px;font-size:15px}
@@ -490,16 +511,63 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
   .wordmark i{display:none}
   .contact .ways{gap:22px}
 }
+/* 640px 이하 — 첫 화면에 영상이 들어오도록 상단 소개를 조이고,
+   핵심 숫자(.facts)는 영상 아래로 내린다: 소개 → 영상 → 숫자 순서. */
+@media (max-width:640px){
+  .hero{padding-top:76px}
+  .hero > .wrap{display:flex;flex-direction:column}
+  .hero > .wrap > .facts{order:1}
+  .hero > .wrap > .recentlearn,
+  .hero > .wrap > .rolebar,
+  .hero > .wrap > .roleline{order:2}
+  .hero-top{margin-bottom:8px;gap:6px}
+  .rolelead{margin-top:10px}
+  .statement{margin-top:12px}
+  .lede{margin-top:10px;font-size:14.5px;line-height:1.68}
+  .hero-actions{margin-top:14px;gap:10px 18px}
+  .film{margin-top:14px;margin-bottom:20px}
+  .facts{margin-top:0}
+  .facts .fact{padding-top:12px;padding-bottom:12px}
+  /* 사진은 이름 오른쪽에 띄워 글줄이 그 옆을 감싸게 한다 — 본문 폭을 좁히지 않는다 */
+  .hero-grid{display:block}
+  .portrait{float:right;width:88px;margin:2px 0 12px 16px}
+}
+/* 작은 폰(높이 800px 이하·좁은 폭) — 같은 순서 그대로 한 단계만 더 조여
+   영상 띠가 첫 화면에 들어오게 한다. 내용은 그대로 둔다. */
+@media (max-width:640px) and (max-height:800px){
+  .hero{padding-top:68px}
+  .hero-top{margin-bottom:6px}
+  .avail{padding:5px 10px}
+  .rolelead{font-size:14px}
+  .rolelead b{font-size:14px}
+  .statement{margin-top:8px;font-size:17.5px}
+  .statement .method{margin-top:8px}
+  .lede{margin-top:8px;font-size:13.8px;line-height:1.55}
+  .hero-actions{margin-top:10px;gap:8px 14px}
+  .hero-actions .pill{padding:9px 15px}
+  .film{margin-top:10px}
+}
 /* 낮은 데스크톱 화면(1366×768 같은 노트북) — 상단 소개의 간격을 한 단계 좁혀
    영상 띠가 첫 화면에 걸치게 한다. 글자·구조는 그대로 둔다. */
 @media (min-width:901px) and (max-height:820px){
-  .hero-top{margin-bottom:10px}
-  .statement{margin-top:12px}
-  .lede{margin-top:8px}
-  .hero-actions{margin-top:14px}
-  .facts{margin-top:18px}
-  .fact{padding-top:12px;padding-bottom:12px}
-  .film{margin-top:16px}
+  .hero{padding-top:68px}
+  .hero-top{margin-bottom:4px}
+  .avail{padding:4px 10px}
+  h1{font-size:clamp(54px,7.3vw,84px)}
+  h1 .latin{margin-top:6px}
+  .rolelead{margin-top:4px;font-size:16px}
+  .rolelead b{font-size:16px}
+  .statement{margin-top:6px;font-size:clamp(18px,1.6vw,20px)}
+  .statement .method{margin-top:5px}
+  .lede{margin-top:4px;font-size:14.5px;line-height:1.5}
+  html[lang="en"] .lede{max-width:38em}
+  .hero-actions{margin-top:9px}
+  .hero-actions .pill{padding:8px 16px}
+  .facts{margin-top:6px}
+  .fact{padding-top:6px;padding-bottom:6px}
+  .fact .v{font-size:clamp(21px,2vw,26px)}
+  .fact .k{margin-top:3px;font-size:11.5px;line-height:1.45}
+  .film{margin-top:6px}
 }
 
 /* ---------- 인쇄 ---------- */
@@ -686,6 +754,11 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
     </div>
 
     <div class="hero-grid">
+      <figure class="portrait">
+        <img src="assets/photo.jpg" alt="강은성 증명사진 / Eunsung Kang, portrait" width="912" height="1172" fetchpriority="high">
+        <figcaption><span class="l-ko">증명사진 · 2026</span><span class="l-en">Portrait · 2026</span></figcaption>
+      </figure>
+
       <div>
         <h1>
           <span class="l-ko">강은성<span class="dot">.</span></span>
@@ -720,11 +793,6 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
           <span class="textlink plain"><span class="l-ko">충남 아산시</span><span class="l-en">Asan-si, Korea</span></span>
         </div>
       </div>
-
-      <figure class="portrait">
-        <img src="assets/photo.jpg" alt="강은성 증명사진 / Eunsung Kang, portrait" width="912" height="1172" fetchpriority="high">
-        <figcaption><span class="l-ko">증명사진 · 2026</span><span class="l-en">Portrait · 2026</span></figcaption>
-      </figure>
     </div>
 
     <div class="facts rise">
@@ -746,22 +814,25 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
       </div>
     </div>
 
-    <!-- 메인 필름 — 현장·설비·문서 20초 감독판. 상단 소개(이름·증명사진·핵심 숫자) 바로 아래,
+    <!-- 메인 필름 — 다시, 현장으로. 상단 소개(이름·증명사진·핵심 숫자) 바로 아래,
          본문 폭을 꽉 채우는 띠로 앉힌다. 로드 시 소리 포함 재생을 먼저 시도하고,
          브라우저 정책에 막히면 무음으로 재생한 뒤 방문자의 첫 조작에 소리를 켠다.
-         우측 하단 버튼은 언제나 보이며, 직접 끈 소리는 다시 켜지 않는다. -->
+         소리 버튼은 데스크톱에서 영상 오른쪽 아래에 항상 떠 있고, 640px 이하에서는
+         영상 바로 아래 캡션 줄로 내려가 영상 화면을 가리지 않는다. -->
     <figure class="film">
-      <div class="film-stage">
-        <video id="heroFilm" muted loop playsinline preload="auto" poster="assets/ricky_director_cut_poster.jpg" aria-label="현장·설비·문서 20초 영상 — 영상 위 버튼으로 소리를 끄고 켤 수 있습니다">
-          <source src="assets/ricky_director_cut_portfolio_20s.mp4" type="video/mp4">
-        </video>
+      <div class="film-frame">
+        <div class="film-stage">
+          <video id="heroFilm" muted loop playsinline preload="auto" poster="assets/ricky_director_cut_poster.jpg" aria-label="Back to the Field — 현장·설비·문서 20초 영상">
+            <source src="assets/ricky_director_cut_portfolio_20s.mp4" type="video/mp4">
+          </video>
+        </div>
         <button type="button" class="film-snd" id="filmSound" data-sound="off">
           <span class="snd-ico" aria-hidden="true"><span class="ico-on">🔊</span><span class="ico-off">🔇</span></span>
           <span class="snd-txt"><span class="l-ko"><span class="t-on">음악 끄기</span><span class="t-off">소리 켜기</span></span><span class="l-en"><span class="t-on">Mute</span><span class="t-off">Sound on</span></span></span>
         </button>
       </div>
       <figcaption>
-        <span><span class="l-ko">《선》 2안 · 현장·설비·문서 · 20초</span><span class="l-en">“The Line”, cut 2 · field, plant, documents · 20s</span></span>
+        <span>Back to the Field — <span class="cap-t">A 17-Year Record</span></span>
         <span class="f-r"><span class="l-ko">소리와 함께 재생</span><span class="l-en">Plays with sound</span></span>
       </figcaption>
     </figure>
