@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>현장을 정리해 온 17년, 강은성</title>
-<meta name="description" content="강은성(Eunsung Kang) 이력서. 17년 5개월 · 8개 사업장 전부 정규직. 태양광 공무, 유리 품질 검사(Excel VBA), 자동차 생산라인, 병원 전산, 본사·자회사 웹사이트 2건 구축 총괄.">
+<title>강은성 Eunsung Kang — 품질관리·공무 17년 | Quality Control &amp; Site Administration</title>
+<meta name="description" content="강은성(Eunsung Kang). 제조 품질관리·공무·현장 운영 17년 5개월, 8개 사업장 전부 정규직. 태양광 공무, 유리 품질 검사(Excel VBA), 자동차 생산라인, 본사·자회사 웹사이트 2건 구축 총괄.">
 <meta name="author" content="Eunsung Kang">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://devgrukang.github.io/">
@@ -12,7 +12,12 @@
 <meta property="og:title" content="현장을 정리해 온 17년, 강은성">
 <meta property="og:description" content="기준이 없어 흔들리는 현장에 선을 그어 왔습니다. 17년 5개월, 8개 사업장 전부 정규직. 국문·영문 이력서.">
 <meta property="og:url" content="https://devgrukang.github.io/">
-<meta property="og:image" content="https://devgrukang.github.io/assets/photo.jpg">
+<meta property="og:image" content="https://devgrukang.github.io/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="강은성 · 품질관리·공무·현장 운영 17년 5개월">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://devgrukang.github.io/assets/og-card.jpg">
 <meta name="theme-color" content="#faf9f6">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,7 +116,10 @@ html[lang="en"] .l-ko{display:none !important}
 .cat[data-cat="site"]{color:var(--olive)}
 
 /* ---------- 직무 탭 ---------- */
-.rolebar{display:flex;flex-wrap:wrap;align-items:center;gap:2px 22px;margin-top:clamp(24px,3.6vh,34px);padding-top:16px;border-top:1px solid var(--rule)}
+.recentlearn{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin-top:clamp(18px,2.8vh,26px);padding-top:10px;border-top:1px solid var(--rule-soft);font-size:var(--t-small);color:var(--ink-70);line-height:1.6}
+.recentlearn .lab{font-size:var(--t-nano);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-40);white-space:nowrap}
+.recentlearn .val{flex:1 1 420px;min-width:0}
+.rolebar{display:flex;flex-wrap:wrap;align-items:center;gap:2px 22px;margin-top:clamp(18px,2.8vh,26px);padding-top:16px;border-top:1px solid var(--rule)}
 .rolebar .lab{font-size:var(--t-nano);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-30);margin-right:2px}
 .rolebar button{appearance:none;background:none;border:0;padding:5px 0 6px;font:inherit;font-size:12.5px;color:var(--ink-50);cursor:pointer;border-bottom:1px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
 .rolebar button:hover{color:var(--ink)}
@@ -311,7 +319,7 @@ section{padding:var(--sec) 0 0;scroll-margin-top:80px}
 .cv tbody tr:hover td{color:var(--ink)}
 .cv .p{font-size:12.5px;color:var(--ink-50);white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:0}
 .cv .co{color:var(--ink);font-weight:500}
-.cv .ty{font-size:11.5px;color:var(--ink-40);white-space:nowrap}
+.cv .ac{font-size:12.5px;color:var(--ink-50);line-height:1.5}
 .cvnote{margin-top:var(--s4);font-size:12px;color:var(--ink-50)}
 details.job{border-bottom:1px solid var(--rule-soft)}
 details.job summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:17px 0;cursor:pointer;list-style:none}
@@ -439,7 +447,7 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
   .cv tbody td.p{grid-column:2;grid-row:1;text-align:right;font-size:12px}
   .cv tbody td.co{grid-column:1;grid-row:1}
   .cv tbody td:nth-child(3){grid-column:1/3;grid-row:2;margin-top:3px;font-size:13px;color:var(--ink-50)}
-  .cv tbody td.ty{display:none}
+  .cv tbody td.ac{grid-column:1/3;grid-row:3;margin-top:3px;font-size:12.5px;color:var(--ink-50)}
   .litem{grid-template-columns:1fr;gap:8px}
   .litem .n{padding-top:0}
   .cred{grid-template-columns:1fr}
@@ -536,7 +544,7 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
   .cv thead th{padding:0 3mm 1.5mm 0;font-size:6.6pt}
   .cv tbody td{padding:calc(2.1mm * var(--p-air)) 3mm;line-height:1.45}
   .cv tbody td:last-child{padding-right:0}
-  .cv .p,.cv .ty{font-size:7.2pt}
+  .cv .p,.cv .ac{font-size:7.2pt}
   .cvnote{margin-top:2mm;font-size:7pt}
   .minihead{margin:calc(6mm * var(--p-air)) 0 0;padding-bottom:1.5mm}
   .minihead span{font-size:6.6pt}
@@ -690,6 +698,11 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
         <div class="v">2<span class="u l-ko">건</span><span class="u l-en">Corporate Websites</span></div>
         <div class="k"><span class="l-ko">본사·자회사 웹사이트 구축 총괄</span><span class="l-en">PM &amp; Launch</span></div>
       </div>
+    </div>
+
+    <div class="recentlearn">
+      <span class="lab"><span class="l-ko">최근 3년 — 새로 익힌 것</span><span class="l-en">Last three years — newly learned</span></span>
+      <span class="val"><span class="l-ko">태양광 발전설비 인허가 절차(2025) · 불량 유형 코드화와 Excel VBA 집계(2023) · 이 사이트 직접 제작(HTML/CSS·JS, 2026)</span><span class="l-en">Photovoltaic permits and authority process (2025) · defect coding and Excel VBA summaries (2023) · this site, hand-built (HTML/CSS/JS, 2026)</span></span>
     </div>
 
     <div class="rolebar" role="group" aria-label="직무별로 보기 / View by role">
@@ -943,42 +956,42 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
               <th><span class="l-ko">기간</span><span class="l-en">Period</span></th>
               <th><span class="l-ko">회사</span><span class="l-en">Company</span></th>
               <th><span class="l-ko">직무</span><span class="l-en">Role</span></th>
-              <th><span class="l-ko">구분</span><span class="l-en">Type</span></th>
+              <th><span class="l-ko">한 줄 성과</span><span class="l-en">Result</span></th>
             </tr>
           </thead>
           <tbody>
             <tr><td class="p">2025.02 – 2026.02</td>
               <td class="co"><span class="l-ko">주식회사 에스에이치신한에스엘디</span><span class="l-en">SH Shinhan ESLD</span></td>
               <td><span class="l-ko">공무팀·태양광 발전설비</span><span class="l-en">Site administration · photovoltaic</span></td>
-              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+              <td class="ac"><span class="l-ko">홈페이지 2건 PM · 프로세스 11종 정리</span><span class="l-en">Two sites as PM · 11 process documents</span></td></tr>
             <tr><td class="p">2023.04 – 2024.05</td>
               <td class="co"><span class="l-ko">비피웍스 (코닝정밀소재)</span><span class="l-en">BP Works (Corning)</span></td>
               <td><span class="l-ko">외포장과·품질 검사</span><span class="l-en">Packaging quality</span></td>
-              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+              <td class="ac"><span class="l-ko">불량 유형 코드화 · 검사 절차서 작성</span><span class="l-en">Defect coding · inspection procedure</span></td></tr>
             <tr><td class="p">2022.11 – 2023.03</td>
               <td class="co"><span class="l-ko">경동택배</span><span class="l-en">Kyungdong Parcel</span></td>
               <td><span class="l-ko">물류과 · 5톤 화물 운송</span><span class="l-en">Logistics driver</span></td>
-              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+              <td class="ac"><span class="l-ko">운송 루트 분석 · 배송시간·연료비 절감</span><span class="l-en">Route analysis · time and fuel cut</span></td></tr>
             <tr><td class="p">2022.06 – 2022.10</td>
               <td class="co"><span class="l-ko">CETI 컴퓨터학원</span><span class="l-en">CETI Computer Academy</span></td>
               <td><span class="l-ko">교무과 · IT 강의</span><span class="l-en">IT instructor</span></td>
-              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+              <td class="ac"><span class="l-ko">IT 기초 강의 · 수준별 커리큘럼 조정</span><span class="l-en">IT basics teaching · curriculum rework</span></td></tr>
             <tr><td class="p">2012.04 – 2019.03</td>
               <td class="co"><span class="l-ko">에이치케이알 (쌍용자동차)</span><span class="l-en">HKR (SsangYong Motor)</span></td>
               <td><span class="l-ko">생산조립 2라인</span><span class="l-en">Assembly line 2</span></td>
-              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+              <td class="ac"><span class="l-ko">병목 구간 정리 · 부품 품질 추적</span><span class="l-en">Bottlenecks cleared · parts quality follow-up</span></td></tr>
             <tr><td class="p">2009.04 – 2012.01</td>
               <td class="co"><span class="l-ko">의료법인 박애의료재단</span><span class="l-en">Bakae Medical Foundation</span></td>
               <td><span class="l-ko">전산시설관리과·팀장</span><span class="l-en">IT &amp; facility, team leader</span></td>
-              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+              <td class="ac"><span class="l-ko">병원 전산망 구축 · 장애 대응 총괄</span><span class="l-en">Hospital network build · fault response</span></td></tr>
             <tr><td class="p">2005.11 – 2009.02</td>
               <td class="co"><span class="l-ko">카르마 스튜디오</span><span class="l-en">KARMA STUDIO</span></td>
               <td><span class="l-ko">촬영팀·상업사진</span><span class="l-en">Commercial photography</span></td>
-              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+              <td class="ac"><span class="l-ko">상업사진 촬영 · 색상 보정</span><span class="l-en">Commercial shoots · colour correction</span></td></tr>
             <tr><td class="p">2004.04 – 2005.10</td>
               <td class="co"><span class="l-ko">부강통신</span><span class="l-en">Bugang Telecom</span></td>
               <td><span class="l-ko">전산실 · KT 통신 전산</span><span class="l-en">IT operations</span></td>
-              <td class="ty"><span class="l-ko">정규직</span><span class="l-en">Full-time</span></td></tr>
+              <td class="ac"><span class="l-ko">KT 통신 전산망 관리 · 장애 대응</span><span class="l-en">KT telecom systems · fault response</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1467,8 +1480,8 @@ footer{padding:clamp(48px,7vh,76px) 0 40px}
     root.setAttribute('lang', lang);
     for (var i=0;i<buttons.length;i++){ buttons[i].setAttribute('aria-pressed', String(buttons[i].dataset.setlang === lang)); }
     document.title = (lang === 'en')
-      ? '17 Years Organising the Site — Eunsung Kang'
-      : '현장을 정리해 온 17년, 강은성';
+      ? 'Eunsung Kang — Quality Control & Site Administration | 17 Years'
+      : '강은성 Eunsung Kang — 품질관리·공무 17년 | Quality Control & Site Administration';
     /* 파일 칸의 PDF 내려받기: 지금 보는 언어의 완성본을 준다 */
     var pdfLink = document.getElementById('printPdf');
     if (pdfLink) pdfLink.setAttribute('href', lang === 'en'
